@@ -1,0 +1,7 @@
+
+State Machine - |upravitelj|state
+Name state.BRISANJE state.SVIRANJE state.SNIMANJE state.NISTA 
+state.NISTA 0 0 0 0 
+state.SNIMANJE 0 0 1 1 
+state.SVIRANJE 0 1 0 1 
+state.BRISANJE 1 0 0 1 

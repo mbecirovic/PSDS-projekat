@@ -1,0 +1,522 @@
+Analysis & Synthesis report for upravitelj
+Thu Jun 15 17:23:31 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |upravitelj|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: fifi:za_fifi
+ 14. Port Connectivity Checks: "FourBit7seg:za_br_unesenih_tipki"
+ 15. Port Connectivity Checks: "fifi:za_fifi"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 15 17:23:31 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; upravitelj                                      ;
+; Top-level Entity Name              ; upravitelj                                      ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 326                                             ;
+;     Total combinational functions  ; 326                                             ;
+;     Dedicated logic registers      ; 192                                             ;
+; Total registers                    ; 192                                             ;
+; Total pins                         ; 16                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F896C6       ;                    ;
+; Top-level entity name                                                      ; upravitelj         ; upravitelj         ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; sonic.vhd                        ; yes             ; User VHDL File  ; C:/Users/Merjem/Desktop/3. godina/PSDS/projekat/finalni/sonic.vhd      ;         ;
+; buzzer.vhd                       ; yes             ; User VHDL File  ; C:/Users/Merjem/Desktop/3. godina/PSDS/projekat/finalni/buzzer.vhd     ;         ;
+; fifi.vhd                         ; yes             ; User VHDL File  ; C:/Users/Merjem/Desktop/3. godina/PSDS/projekat/finalni/fifi.vhd       ;         ;
+; buraz.vhd                        ; yes             ; User VHDL File  ; C:/Users/Merjem/Desktop/3. godina/PSDS/projekat/finalni/buraz.vhd      ;         ;
+; seg7.vhd                         ; yes             ; User VHDL File  ; C:/Users/Merjem/Desktop/3. godina/PSDS/projekat/finalni/seg7.vhd       ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/Merjem/Desktop/3. godina/PSDS/projekat/finalni/ROM.vhd        ;         ;
+; upravitelj.vhd                   ; yes             ; User VHDL File  ; C:/Users/Merjem/Desktop/3. godina/PSDS/projekat/finalni/upravitelj.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 326   ;
+;                                             ;       ;
+; Total combinational functions               ; 326   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 89    ;
+;     -- 3 input functions                    ; 8     ;
+;     -- <=2 input functions                  ; 229   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 142   ;
+;     -- arithmetic mode                      ; 184   ;
+;                                             ;       ;
+; Total registers                             ; 192   ;
+;     -- Dedicated logic registers            ; 192   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 16    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 192   ;
+; Total fan-out                               ; 1442  ;
+; Average fan-out                             ; 2.70  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
+; |upravitelj                ; 326 (1)           ; 192 (1)      ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |upravitelj                                  ; work         ;
+;    |buraz:za_buraza|       ; 269 (169)         ; 159 (95)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|buraz:za_buraza                  ; work         ;
+;       |buzzer:za_buzzer|   ; 100 (100)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|buraz:za_buraza|buzzer:za_buzzer ; work         ;
+;    |sonic:za_sonica|       ; 56 (56)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica                  ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |upravitelj|state                                               ;
++----------------+----------------+----------------+----------------+-------------+
+; Name           ; state.BRISANJE ; state.SVIRANJE ; state.SNIMANJE ; state.NISTA ;
++----------------+----------------+----------------+----------------+-------------+
+; state.NISTA    ; 0              ; 0              ; 0              ; 0           ;
+; state.SNIMANJE ; 0              ; 0              ; 1              ; 1           ;
+; state.SVIRANJE ; 0              ; 1              ; 0              ; 1           ;
+; state.BRISANJE ; 1              ; 0              ; 0              ; 1           ;
++----------------+----------------+----------------+----------------+-------------+
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; buraz:za_buraza|i[0]                   ; Stuck at VCC due to stuck port data_in      ;
+; fifi:za_fifi|array_reg[7][9]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[7][8]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[7][7]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[7][6]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[7][5]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[7][4]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[7][3]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[7][2]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[7][1]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[7][0]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][9]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][8]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][7]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][6]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][5]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][4]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][3]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][2]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][1]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[6][0]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][9]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][8]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][7]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][6]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][5]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][4]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][3]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][2]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][1]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[5][0]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][9]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][8]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][7]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][6]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][5]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][4]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][3]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][2]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][1]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[4][0]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][9]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][8]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][7]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][6]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][5]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][4]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][3]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][2]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][1]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[3][0]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][9]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][8]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][7]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][6]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][5]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][4]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][3]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][2]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][1]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[2][0]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][9]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][8]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][7]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][6]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][5]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][4]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][3]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][2]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][1]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[1][0]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][9]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][8]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][7]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][6]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][5]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][4]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][3]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][2]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][1]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|array_reg[0][0]           ; Stuck at GND due to stuck port clock_enable ;
+; fifi:za_fifi|w_ptr_reg[0..2]           ; Stuck at GND due to stuck port data_in      ;
+; fifi:za_fifi|r_ptr_reg[0..2]           ; Stuck at GND due to stuck port data_in      ;
+; fifi:za_fifi|full_reg                  ; Stuck at GND due to stuck port data_in      ;
+; fifi:za_fifi|empty_reg                 ; Stuck at VCC due to stuck port data_in      ;
+; state.NISTA                            ; Lost fanout                                 ;
+; state.SNIMANJE                         ; Lost fanout                                 ;
+; state.BRISANJE                         ; Lost fanout                                 ;
+; Total Number of Removed Registers = 92 ;                                             ;
++----------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 192   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 128   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 96    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; buraz:za_buraza|i[3]                   ; 1       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |upravitelj|buraz:za_buraza|sekunde[12] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifi:za_fifi ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; b              ; 10    ; Signed Integer                   ;
+; w              ; 3     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "FourBit7seg:za_br_unesenih_tipki" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; u    ; Input ; Info     ; Stuck at GND                       ;
++------+-------+----------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fifi:za_fifi"                                                                        ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Jun 15 17:23:29 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off upravitelj -c upravitelj
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file sonic.vhd
+    Info (12022): Found design unit 1: sonic-sonic_arch
+    Info (12023): Found entity 1: sonic
+Info (12021): Found 2 design units, including 1 entities, in source file buzzer.vhd
+    Info (12022): Found design unit 1: buzzer-buzzer_arch
+    Info (12023): Found entity 1: buzzer
+Info (12021): Found 2 design units, including 1 entities, in source file fifi.vhd
+    Info (12022): Found design unit 1: fifi-arch
+    Info (12023): Found entity 1: fifi
+Info (12021): Found 2 design units, including 1 entities, in source file buraz.vhd
+    Info (12022): Found design unit 1: buraz-buraz_arch
+    Info (12023): Found entity 1: buraz
+Info (12021): Found 2 design units, including 1 entities, in source file seg7.vhd
+    Info (12022): Found design unit 1: FourBit7seg-Behavioral
+    Info (12023): Found entity 1: FourBit7seg
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: ROM-ROM_arch
+    Info (12023): Found entity 1: ROM
+Info (12021): Found 2 design units, including 1 entities, in source file upravitelj.vhd
+    Info (12022): Found design unit 1: upravitelj-upravitelj_arch
+    Info (12023): Found entity 1: upravitelj
+Info (12127): Elaborating entity "upravitelj" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at upravitelj.vhd(90): object "empty_FIFO_signal" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at upravitelj.vhd(94): object "i_next" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at upravitelj.vhd(98): used implicit default value for signal "rdEnable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at upravitelj.vhd(98): used implicit default value for signal "wrEnable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10631): VHDL Process Statement warning at upravitelj.vhd(105): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "a_ton5[0]" at upravitelj.vhd(144)
+Info (10041): Inferred latch for "a_ton5[1]" at upravitelj.vhd(144)
+Info (10041): Inferred latch for "a_ton4[0]" at upravitelj.vhd(143)
+Info (10041): Inferred latch for "a_ton4[1]" at upravitelj.vhd(143)
+Info (10041): Inferred latch for "a_ton3[0]" at upravitelj.vhd(142)
+Info (10041): Inferred latch for "a_ton3[1]" at upravitelj.vhd(142)
+Info (10041): Inferred latch for "a_ton2[0]" at upravitelj.vhd(141)
+Info (10041): Inferred latch for "a_ton2[1]" at upravitelj.vhd(141)
+Info (10041): Inferred latch for "a_ton1[0]" at upravitelj.vhd(140)
+Info (10041): Inferred latch for "a_ton1[1]" at upravitelj.vhd(140)
+Info (10041): Inferred latch for "state_next.BRISANJE" at upravitelj.vhd(119)
+Info (10041): Inferred latch for "state_next.SVIRANJE" at upravitelj.vhd(119)
+Info (10041): Inferred latch for "state_next.SNIMANJE" at upravitelj.vhd(119)
+Info (10041): Inferred latch for "state_next.NISTA" at upravitelj.vhd(119)
+Info (10041): Inferred latch for "i[0]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[1]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[2]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[3]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[4]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[5]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[6]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[7]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[8]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[9]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[10]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[11]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[12]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[13]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[14]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[15]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[16]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[17]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[18]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[19]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[20]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[21]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[22]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[23]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[24]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[25]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[26]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[27]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[28]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[29]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[30]" at upravitelj.vhd(105)
+Info (10041): Inferred latch for "i[31]" at upravitelj.vhd(105)
+Info (12128): Elaborating entity "buraz" for hierarchy "buraz:za_buraza"
+Info (10041): Inferred latch for "read_address[0]" at buraz.vhd(73)
+Info (10041): Inferred latch for "read_address[1]" at buraz.vhd(73)
+Info (12128): Elaborating entity "ROM" for hierarchy "buraz:za_buraza|ROM:za_ROM"
+Info (12128): Elaborating entity "buzzer" for hierarchy "buraz:za_buraza|buzzer:za_buzzer"
+Info (12128): Elaborating entity "fifi" for hierarchy "fifi:za_fifi"
+Info (12128): Elaborating entity "sonic" for hierarchy "sonic:za_sonica"
+Warning (10036): Verilog HDL or VHDL warning at sonic.vhd(33): object "enable" assigned a value but never read
+Info (10041): Inferred latch for "broj_tipke[0]" at sonic.vhd(76)
+Info (10041): Inferred latch for "broj_tipke[1]" at sonic.vhd(76)
+Info (12128): Elaborating entity "FourBit7seg" for hierarchy "FourBit7seg:za_br_unesenih_tipki"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "br_unesenih_tipki[0]" is stuck at GND
+    Warning (13410): Pin "br_unesenih_tipki[1]" is stuck at GND
+    Warning (13410): Pin "br_unesenih_tipki[2]" is stuck at GND
+    Warning (13410): Pin "br_unesenih_tipki[3]" is stuck at GND
+    Warning (13410): Pin "br_unesenih_tipki[4]" is stuck at GND
+    Warning (13410): Pin "br_unesenih_tipki[5]" is stuck at GND
+    Warning (13410): Pin "br_unesenih_tipki[6]" is stuck at VCC
+    Warning (13410): Pin "full_FIFO" is stuck at GND
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "key_potvrdi"
+    Warning (15610): No output dependent on input pin "echo"
+Info (21057): Implemented 342 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 326 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4638 megabytes
+    Info: Processing ended: Thu Jun 15 17:23:31 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
