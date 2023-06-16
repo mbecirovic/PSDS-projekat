@@ -82,8 +82,8 @@ architecture sonic_arch of sonic is
    -- cifra1 <= distanca /10;
     
     --izlazHex0: FourBit7seg port map(std_logic_vector(to_signed(broj_tipke, 4)), Hex0(0), Hex0(1), Hex0(2), Hex0(3), Hex0(4), Hex0(5), Hex0(6));
-    -- izlazHex1: FourBit7seg port map(std_logic_vector(to_signed(cifra0, 4)), Hex1(0), Hex1(1), Hex1(2), Hex1(3), Hex1(4), Hex1(5), Hex1(6));
-    --izlazHex2: FourBit7seg port map(std_logic_vector(to_signed(cifra1, 4)), Hex2(0), Hex2(1), Hex2(2), Hex2(3), Hex2(4), Hex2(5), Hex2(6));
+   -- izlazHex1: FourBit7seg port map(std_logic_vector(to_signed(cifra0, 4)), Hex1(0), Hex1(1), Hex1(2), Hex1(3), Hex1(4), Hex1(5), Hex1(6));
+   -- izlazHex2: FourBit7seg port map(std_logic_vector(to_signed(cifra1, 4)), Hex2(0), Hex2(1), Hex2(2), Hex2(3), Hex2(4), Hex2(5), Hex2(6));
 
         
 end sonic_arch;
