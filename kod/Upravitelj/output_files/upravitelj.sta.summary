@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -80.664
+TNS   : -2861.540
+
+Type  : Slow Model Setup 'sekunde[0]'
+Slack : -3.044
+TNS   : -22.534
+
+Type  : Slow Model Setup 'state.SVIRANJE'
+Slack : -2.901
+TNS   : -30.069
+
+Type  : Slow Model Setup 'counterUpisa[0]'
+Slack : -1.852
+TNS   : -27.677
+
+Type  : Slow Model Setup 'state.BRISANJE'
+Slack : -0.630
+TNS   : -1.068
+
+Type  : Slow Model Hold 'state.BRISANJE'
+Slack : -3.190
+TNS   : -6.209
+
+Type  : Slow Model Hold 'clk'
+Slack : -1.662
+TNS   : -74.484
+
+Type  : Slow Model Hold 'sekunde[0]'
+Slack : -0.681
+TNS   : -4.221
+
+Type  : Slow Model Hold 'counterUpisa[0]'
+Slack : 0.690
+TNS   : 0.000
+
+Type  : Slow Model Hold 'state.SVIRANJE'
+Slack : 0.842
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk'
+Slack : -3.688
+TNS   : -222.329
+
+Type  : Slow Model Recovery 'counterUpisa[0]'
+Slack : 1.996
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'sekunde[0]'
+Slack : 2.695
+TNS   : 0.000
+
+Type  : Slow Model Removal 'sekunde[0]'
+Slack : -5.398
+TNS   : -130.616
+
+Type  : Slow Model Removal 'counterUpisa[0]'
+Slack : -4.027
+TNS   : -66.701
+
+Type  : Slow Model Removal 'clk'
+Slack : -0.090
+TNS   : -0.630
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -348.380
+
+Type  : Slow Model Minimum Pulse Width 'state.SVIRANJE'
+Slack : -0.500
+TNS   : -10.000
+
+Type  : Slow Model Minimum Pulse Width 'counterUpisa[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'sekunde[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'state.BRISANJE'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk'
+Slack : -35.687
+TNS   : -1116.477
+
+Type  : Fast Model Setup 'sekunde[0]'
+Slack : -0.878
+TNS   : -4.720
+
+Type  : Fast Model Setup 'state.SVIRANJE'
+Slack : -0.728
+TNS   : -7.371
+
+Type  : Fast Model Setup 'counterUpisa[0]'
+Slack : -0.507
+TNS   : -3.922
+
+Type  : Fast Model Setup 'state.BRISANJE'
+Slack : 0.118
+TNS   : 0.000
+
+Type  : Fast Model Hold 'state.BRISANJE'
+Slack : -1.835
+TNS   : -3.588
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.071
+TNS   : -74.393
+
+Type  : Fast Model Hold 'sekunde[0]'
+Slack : -0.361
+TNS   : -1.796
+
+Type  : Fast Model Hold 'counterUpisa[0]'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast Model Hold 'state.SVIRANJE'
+Slack : 0.719
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk'
+Slack : -1.250
+TNS   : -73.230
+
+Type  : Fast Model Recovery 'counterUpisa[0]'
+Slack : 1.626
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'sekunde[0]'
+Slack : 1.952
+TNS   : 0.000
+
+Type  : Fast Model Removal 'sekunde[0]'
+Slack : -2.848
+TNS   : -70.573
+
+Type  : Fast Model Removal 'counterUpisa[0]'
+Slack : -2.251
+TNS   : -38.384
+
+Type  : Fast Model Removal 'clk'
+Slack : -0.444
+TNS   : -20.658
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -348.380
+
+Type  : Fast Model Minimum Pulse Width 'state.SVIRANJE'
+Slack : -0.500
+TNS   : -10.000
+
+Type  : Fast Model Minimum Pulse Width 'counterUpisa[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'sekunde[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'state.BRISANJE'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

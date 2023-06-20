@@ -1,0 +1,1065 @@
+TimeQuest Timing Analyzer report for buzzer
+Sun Jun 18 23:15:44 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Propagation Delay
+ 17. Minimum Propagation Delay
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Propagation Delay
+ 29. Minimum Propagation Delay
+ 30. Multicorner Timing Analysis Summary
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Progagation Delay
+ 34. Minimum Progagation Delay
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; buzzer                                                            ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C70F896C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 242.72 MHz ; 242.72 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -3.120 ; -162.546      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -65.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                          ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.120 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[25] ; clk          ; clk         ; 1.000        ; -0.011     ; 4.145      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.107 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.144      ;
+; -3.040 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[22] ; clk          ; clk         ; 1.000        ; 0.001      ; 4.077      ;
+; -3.038 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[20] ; clk          ; clk         ; 1.000        ; 0.001      ; 4.075      ;
+; -3.037 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[21] ; clk          ; clk         ; 1.000        ; 0.001      ; 4.074      ;
+; -3.035 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[23] ; clk          ; clk         ; 1.000        ; 0.001      ; 4.072      ;
+; -3.033 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[25] ; clk          ; clk         ; 1.000        ; 0.001      ; 4.070      ;
+; -3.030 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[17] ; clk          ; clk         ; 1.000        ; 0.001      ; 4.067      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.985 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.022      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.981 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; 0.001      ; 4.018      ;
+; -2.959 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[31] ; clk          ; clk         ; 1.000        ; -0.012     ; 3.983      ;
+; -2.949 ; buzzer:testiranje|sekunde[0]    ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; -0.011     ; 3.974      ;
+; -2.918 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[22] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.955      ;
+; -2.916 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[20] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.953      ;
+; -2.915 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[21] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.952      ;
+; -2.914 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|counter50[22] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.951      ;
+; -2.913 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[23] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.950      ;
+; -2.912 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|counter50[20] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.949      ;
+; -2.911 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|counter50[21] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.948      ;
+; -2.911 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[25] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.948      ;
+; -2.909 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|counter50[23] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.946      ;
+; -2.908 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[17] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.945      ;
+; -2.907 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|counter50[25] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.944      ;
+; -2.904 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|counter50[17] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.941      ;
+; -2.900 ; buzzer:testiranje|counter50[1]  ; buzzer:testiranje|counter50[25] ; clk          ; clk         ; 1.000        ; -0.010     ; 3.926      ;
+; -2.888 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[30] ; clk          ; clk         ; 1.000        ; -0.012     ; 3.912      ;
+; -2.878 ; buzzer:testiranje|sekunde[0]    ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; -0.011     ; 3.903      ;
+; -2.845 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[23] ; clk          ; clk         ; 1.000        ; -0.011     ; 3.870      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.838 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; 0.001      ; 3.875      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
+; -2.828 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.864      ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                          ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; buzzer:testiranje|sekunde[0]    ; buzzer:testiranje|sekunde[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.531 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|counter50[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.531 ; buzzer:testiranje|sekunde[31]   ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.795 ; buzzer:testiranje|counter50[16] ; buzzer:testiranje|counter50[16] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; buzzer:testiranje|counter50[18] ; buzzer:testiranje|counter50[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|counter50[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; buzzer:testiranje|sekunde[16]   ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.801 ; buzzer:testiranje|counter50[2]  ; buzzer:testiranje|counter50[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802 ; buzzer:testiranje|counter50[4]  ; buzzer:testiranje|counter50[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.805 ; buzzer:testiranje|counter50[1]  ; buzzer:testiranje|counter50[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805 ; buzzer:testiranje|sekunde[1]    ; buzzer:testiranje|sekunde[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805 ; buzzer:testiranje|sekunde[17]   ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806 ; buzzer:testiranje|counter50[9]  ; buzzer:testiranje|counter50[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|counter50[11] ; buzzer:testiranje|counter50[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|counter50[29] ; buzzer:testiranje|counter50[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[2]    ; buzzer:testiranje|sekunde[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[4]    ; buzzer:testiranje|sekunde[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[7]    ; buzzer:testiranje|sekunde[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[9]    ; buzzer:testiranje|sekunde[9]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[11]   ; buzzer:testiranje|sekunde[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[13]   ; buzzer:testiranje|sekunde[13]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[14]   ; buzzer:testiranje|sekunde[14]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[15]   ; buzzer:testiranje|sekunde[15]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[18]   ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[20]   ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[23]   ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[25]   ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[27]   ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[29]   ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; buzzer:testiranje|sekunde[30]   ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.835 ; buzzer:testiranje|counter50[8]  ; buzzer:testiranje|counter50[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; buzzer:testiranje|counter50[10] ; buzzer:testiranje|counter50[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.101      ;
+; 0.838 ; buzzer:testiranje|counter50[3]  ; buzzer:testiranje|counter50[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|counter50[24] ; buzzer:testiranje|counter50[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|counter50[26] ; buzzer:testiranje|counter50[26] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[28] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|sekunde[3]    ; buzzer:testiranje|sekunde[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|sekunde[8]    ; buzzer:testiranje|sekunde[8]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|sekunde[10]   ; buzzer:testiranje|sekunde[10]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|sekunde[12]   ; buzzer:testiranje|sekunde[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|sekunde[19]   ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|sekunde[24]   ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|sekunde[26]   ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; buzzer:testiranje|sekunde[28]   ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839 ; buzzer:testiranje|counter50[5]  ; buzzer:testiranje|counter50[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; buzzer:testiranje|counter50[6]  ; buzzer:testiranje|counter50[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; buzzer:testiranje|sekunde[5]    ; buzzer:testiranje|sekunde[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; buzzer:testiranje|sekunde[6]    ; buzzer:testiranje|sekunde[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; buzzer:testiranje|sekunde[21]   ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; buzzer:testiranje|sekunde[22]   ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 1.011 ; buzzer:testiranje|sekunde[0]    ; buzzer:testiranje|sekunde[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.277      ;
+; 1.178 ; buzzer:testiranje|sekunde[16]   ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.444      ;
+; 1.178 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|counter50[28] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.444      ;
+; 1.184 ; buzzer:testiranje|counter50[2]  ; buzzer:testiranje|counter50[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.450      ;
+; 1.185 ; buzzer:testiranje|counter50[4]  ; buzzer:testiranje|counter50[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.451      ;
+; 1.188 ; buzzer:testiranje|counter50[1]  ; buzzer:testiranje|counter50[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.454      ;
+; 1.188 ; buzzer:testiranje|sekunde[1]    ; buzzer:testiranje|sekunde[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.454      ;
+; 1.188 ; buzzer:testiranje|sekunde[17]   ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.454      ;
+; 1.189 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[30]   ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|counter50[29] ; buzzer:testiranje|counter50[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[13]   ; buzzer:testiranje|sekunde[14]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[14]   ; buzzer:testiranje|sekunde[15]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[29]   ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|counter50[9]  ; buzzer:testiranje|counter50[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[2]    ; buzzer:testiranje|sekunde[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[9]    ; buzzer:testiranje|sekunde[10]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[11]   ; buzzer:testiranje|sekunde[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[18]   ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[25]   ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[27]   ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[4]    ; buzzer:testiranje|sekunde[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; buzzer:testiranje|sekunde[20]   ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.221 ; buzzer:testiranje|counter50[8]  ; buzzer:testiranje|counter50[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.487      ;
+; 1.221 ; buzzer:testiranje|counter50[10] ; buzzer:testiranje|counter50[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.487      ;
+; 1.224 ; buzzer:testiranje|counter50[26] ; buzzer:testiranje|counter50[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|counter50[3]  ; buzzer:testiranje|counter50[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|sekunde[3]    ; buzzer:testiranje|sekunde[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|sekunde[8]    ; buzzer:testiranje|sekunde[9]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|sekunde[10]   ; buzzer:testiranje|sekunde[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|sekunde[12]   ; buzzer:testiranje|sekunde[13]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|sekunde[19]   ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|sekunde[24]   ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|sekunde[26]   ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; buzzer:testiranje|sekunde[28]   ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225 ; buzzer:testiranje|sekunde[6]    ; buzzer:testiranje|sekunde[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; buzzer:testiranje|sekunde[22]   ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; buzzer:testiranje|counter50[5]  ; buzzer:testiranje|counter50[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; buzzer:testiranje|sekunde[5]    ; buzzer:testiranje|sekunde[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; buzzer:testiranje|sekunde[21]   ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.249 ; buzzer:testiranje|counter50[16] ; buzzer:testiranje|counter50[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.515      ;
+; 1.249 ; buzzer:testiranje|sekunde[16]   ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.515      ;
+; 1.249 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|counter50[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.515      ;
+; 1.255 ; buzzer:testiranje|counter50[2]  ; buzzer:testiranje|counter50[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.521      ;
+; 1.256 ; buzzer:testiranje|counter50[4]  ; buzzer:testiranje|counter50[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.522      ;
+; 1.259 ; buzzer:testiranje|counter50[1]  ; buzzer:testiranje|counter50[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.525      ;
+; 1.259 ; buzzer:testiranje|sekunde[1]    ; buzzer:testiranje|sekunde[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.525      ;
+; 1.259 ; buzzer:testiranje|sekunde[17]   ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.525      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[24]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[24]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[25]   ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; sound     ; clk        ; 11.909 ; 11.909 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; sound     ; clk        ; 9.698 ; 9.698 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+----+--------+--------+----+
+; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
++------------+-------------+----+--------+--------+----+
+; enable     ; sound       ;    ; 12.063 ; 12.063 ;    ;
++------------+-------------+----+--------+--------+----+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+----+--------+--------+----+
+; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
++------------+-------------+----+--------+--------+----+
+; enable     ; sound       ;    ; 12.063 ; 12.063 ;    ;
++------------+-------------+----+--------+--------+----+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.963 ; -42.205       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -65.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                          ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.963 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[25] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.984      ;
+; -0.923 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[31] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.944      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.902 ; buzzer:testiranje|sekunde[0]    ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.924      ;
+; -0.902 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.935      ;
+; -0.888 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[30] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.909      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.878 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.911      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.877 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.910      ;
+; -0.867 ; buzzer:testiranje|sekunde[0]    ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.889      ;
+; -0.853 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[29] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.874      ;
+; -0.853 ; buzzer:testiranje|counter50[1]  ; buzzer:testiranje|counter50[25] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.874      ;
+; -0.832 ; buzzer:testiranje|sekunde[0]    ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.854      ;
+; -0.821 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[23] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.842      ;
+; -0.818 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[28] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.839      ;
+; -0.817 ; buzzer:testiranje|counter50[2]  ; buzzer:testiranje|counter50[25] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.838      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.814 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.847      ;
+; -0.813 ; buzzer:testiranje|counter50[1]  ; buzzer:testiranje|counter50[31] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.834      ;
+; -0.812 ; buzzer:testiranje|sekunde[1]    ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.834      ;
+; -0.809 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[22] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.841      ;
+; -0.808 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[20] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.840      ;
+; -0.807 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[21] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.839      ;
+; -0.805 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[25] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.837      ;
+; -0.805 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[23] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.837      ;
+; -0.803 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.802 ; buzzer:testiranje|counter50[22] ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.835      ;
+; -0.800 ; buzzer:testiranje|counter50[0]  ; buzzer:testiranje|counter50[22] ; clk          ; clk         ; 1.000        ; -0.011     ; 1.821      ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                          ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; buzzer:testiranje|sekunde[0]    ; buzzer:testiranje|sekunde[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.243 ; buzzer:testiranje|counter50[31] ; buzzer:testiranje|counter50[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; buzzer:testiranje|sekunde[31]   ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.355 ; buzzer:testiranje|counter50[16] ; buzzer:testiranje|counter50[16] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; buzzer:testiranje|sekunde[16]   ; buzzer:testiranje|sekunde[16]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.356 ; buzzer:testiranje|counter50[18] ; buzzer:testiranje|counter50[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|counter50[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.358 ; buzzer:testiranje|counter50[2]  ; buzzer:testiranje|counter50[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; buzzer:testiranje|counter50[4]  ; buzzer:testiranje|counter50[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; buzzer:testiranje|counter50[1]  ; buzzer:testiranje|counter50[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; buzzer:testiranje|sekunde[17]   ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; buzzer:testiranje|counter50[9]  ; buzzer:testiranje|counter50[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; buzzer:testiranje|counter50[11] ; buzzer:testiranje|counter50[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; buzzer:testiranje|sekunde[2]    ; buzzer:testiranje|sekunde[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; buzzer:testiranje|sekunde[9]    ; buzzer:testiranje|sekunde[9]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; buzzer:testiranje|sekunde[11]   ; buzzer:testiranje|sekunde[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; buzzer:testiranje|sekunde[18]   ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; buzzer:testiranje|sekunde[25]   ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; buzzer:testiranje|sekunde[27]   ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; buzzer:testiranje|counter50[29] ; buzzer:testiranje|counter50[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|sekunde[4]    ; buzzer:testiranje|sekunde[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|sekunde[7]    ; buzzer:testiranje|sekunde[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|sekunde[13]   ; buzzer:testiranje|sekunde[13]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|sekunde[14]   ; buzzer:testiranje|sekunde[14]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|sekunde[15]   ; buzzer:testiranje|sekunde[15]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|sekunde[20]   ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|sekunde[23]   ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|sekunde[29]   ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; buzzer:testiranje|sekunde[30]   ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; buzzer:testiranje|sekunde[1]    ; buzzer:testiranje|sekunde[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.369 ; buzzer:testiranje|counter50[8]  ; buzzer:testiranje|counter50[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; buzzer:testiranje|counter50[10] ; buzzer:testiranje|counter50[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; buzzer:testiranje|counter50[3]  ; buzzer:testiranje|counter50[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; buzzer:testiranje|counter50[24] ; buzzer:testiranje|counter50[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; buzzer:testiranje|counter50[26] ; buzzer:testiranje|counter50[26] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; buzzer:testiranje|sekunde[3]    ; buzzer:testiranje|sekunde[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; buzzer:testiranje|sekunde[8]    ; buzzer:testiranje|sekunde[8]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; buzzer:testiranje|sekunde[10]   ; buzzer:testiranje|sekunde[10]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; buzzer:testiranje|sekunde[19]   ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; buzzer:testiranje|sekunde[24]   ; buzzer:testiranje|sekunde[24]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; buzzer:testiranje|sekunde[26]   ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; buzzer:testiranje|counter50[5]  ; buzzer:testiranje|counter50[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; buzzer:testiranje|counter50[6]  ; buzzer:testiranje|counter50[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[28] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; buzzer:testiranje|sekunde[5]    ; buzzer:testiranje|sekunde[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; buzzer:testiranje|sekunde[6]    ; buzzer:testiranje|sekunde[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; buzzer:testiranje|sekunde[12]   ; buzzer:testiranje|sekunde[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; buzzer:testiranje|sekunde[21]   ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; buzzer:testiranje|sekunde[22]   ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; buzzer:testiranje|sekunde[28]   ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.447 ; buzzer:testiranje|sekunde[0]    ; buzzer:testiranje|sekunde[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.599      ;
+; 0.493 ; buzzer:testiranje|sekunde[16]   ; buzzer:testiranje|sekunde[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.645      ;
+; 0.494 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|counter50[28] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.646      ;
+; 0.496 ; buzzer:testiranje|counter50[2]  ; buzzer:testiranje|counter50[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496 ; buzzer:testiranje|counter50[4]  ; buzzer:testiranje|counter50[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497 ; buzzer:testiranje|counter50[1]  ; buzzer:testiranje|counter50[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497 ; buzzer:testiranje|sekunde[1]    ; buzzer:testiranje|sekunde[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497 ; buzzer:testiranje|sekunde[17]   ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.649      ;
+; 0.498 ; buzzer:testiranje|counter50[9]  ; buzzer:testiranje|counter50[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; buzzer:testiranje|sekunde[2]    ; buzzer:testiranje|sekunde[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; buzzer:testiranje|sekunde[9]    ; buzzer:testiranje|sekunde[10]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; buzzer:testiranje|sekunde[18]   ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; buzzer:testiranje|sekunde[25]   ; buzzer:testiranje|sekunde[26]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; buzzer:testiranje|sekunde[11]   ; buzzer:testiranje|sekunde[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; buzzer:testiranje|sekunde[27]   ; buzzer:testiranje|sekunde[28]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; buzzer:testiranje|counter50[30] ; buzzer:testiranje|counter50[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; buzzer:testiranje|sekunde[30]   ; buzzer:testiranje|sekunde[31]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; buzzer:testiranje|counter50[29] ; buzzer:testiranje|counter50[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; buzzer:testiranje|sekunde[13]   ; buzzer:testiranje|sekunde[14]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; buzzer:testiranje|sekunde[14]   ; buzzer:testiranje|sekunde[15]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; buzzer:testiranje|sekunde[29]   ; buzzer:testiranje|sekunde[30]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; buzzer:testiranje|sekunde[4]    ; buzzer:testiranje|sekunde[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; buzzer:testiranje|sekunde[20]   ; buzzer:testiranje|sekunde[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.509 ; buzzer:testiranje|counter50[8]  ; buzzer:testiranje|counter50[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; buzzer:testiranje|counter50[10] ; buzzer:testiranje|counter50[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.511 ; buzzer:testiranje|counter50[26] ; buzzer:testiranje|counter50[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; buzzer:testiranje|counter50[3]  ; buzzer:testiranje|counter50[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; buzzer:testiranje|sekunde[8]    ; buzzer:testiranje|sekunde[9]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; buzzer:testiranje|sekunde[10]   ; buzzer:testiranje|sekunde[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; buzzer:testiranje|sekunde[24]   ; buzzer:testiranje|sekunde[25]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; buzzer:testiranje|sekunde[26]   ; buzzer:testiranje|sekunde[27]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; buzzer:testiranje|sekunde[3]    ; buzzer:testiranje|sekunde[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; buzzer:testiranje|sekunde[19]   ; buzzer:testiranje|sekunde[20]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; buzzer:testiranje|counter50[28] ; buzzer:testiranje|counter50[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; buzzer:testiranje|sekunde[6]    ; buzzer:testiranje|sekunde[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; buzzer:testiranje|sekunde[12]   ; buzzer:testiranje|sekunde[13]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; buzzer:testiranje|sekunde[22]   ; buzzer:testiranje|sekunde[23]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; buzzer:testiranje|sekunde[28]   ; buzzer:testiranje|sekunde[29]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; buzzer:testiranje|counter50[5]  ; buzzer:testiranje|counter50[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; buzzer:testiranje|sekunde[5]    ; buzzer:testiranje|sekunde[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; buzzer:testiranje|sekunde[21]   ; buzzer:testiranje|sekunde[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.528 ; buzzer:testiranje|counter50[16] ; buzzer:testiranje|counter50[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.680      ;
+; 0.528 ; buzzer:testiranje|sekunde[16]   ; buzzer:testiranje|sekunde[18]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.680      ;
+; 0.529 ; buzzer:testiranje|counter50[27] ; buzzer:testiranje|counter50[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.681      ;
+; 0.531 ; buzzer:testiranje|counter50[2]  ; buzzer:testiranje|counter50[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531 ; buzzer:testiranje|counter50[4]  ; buzzer:testiranje|counter50[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532 ; buzzer:testiranje|counter50[1]  ; buzzer:testiranje|counter50[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.684      ;
+; 0.532 ; buzzer:testiranje|sekunde[1]    ; buzzer:testiranje|sekunde[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.684      ;
+; 0.532 ; buzzer:testiranje|sekunde[17]   ; buzzer:testiranje|sekunde[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.684      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|counter50[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|counter50[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[24]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; buzzer:testiranje|sekunde[24]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; buzzer:testiranje|sekunde[25]   ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; sound     ; clk        ; 6.178 ; 6.178 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; sound     ; clk        ; 5.184 ; 5.184 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; enable     ; sound       ;    ; 6.541 ; 6.541 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; enable     ; sound       ;    ; 6.541 ; 6.541 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.120   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  clk             ; -3.120   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -162.546 ; 0.0   ; 0.0      ; 0.0     ; -65.38              ;
+;  clk             ; -162.546 ; 0.000 ; N/A      ; N/A     ; -65.380             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; sound     ; clk        ; 11.909 ; 11.909 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; sound     ; clk        ; 5.184 ; 5.184 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Progagation Delay                                    ;
++------------+-------------+----+--------+--------+----+
+; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
++------------+-------------+----+--------+--------+----+
+; enable     ; sound       ;    ; 12.063 ; 12.063 ;    ;
++------------+-------------+----+--------+--------+----+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; enable     ; sound       ;    ; 6.541 ; 6.541 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2496     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2496     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 65    ; 65   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 33    ; 33   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jun 18 23:15:43 2023
+Info: Command: quartus_sta buzzer -c buzzer
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'buzzer.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.120
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.120      -162.546 clk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -65.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.963
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.963       -42.205 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -65.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4542 megabytes
+    Info: Processing ended: Sun Jun 18 23:15:44 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

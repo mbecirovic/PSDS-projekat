@@ -1,9 +1,0 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-
-entity upravitelj is 
-end upravitelj;
-
-architecture upravitelj_arch of upravitelj is
-end upravitelj_arch;

@@ -1,0 +1,14 @@
+|ROM
+re_i => rdata_o.OUTPUTSELECT
+re_i => rdata_o.OUTPUTSELECT
+re_i => rdata_o.OUTPUTSELECT
+raddr_i[0] => Mux0.IN5
+raddr_i[0] => Mux1.IN5
+raddr_i[0] => rdata_o.DATAB
+raddr_i[1] => Mux0.IN4
+raddr_i[1] => Mux1.IN4
+rdata_o[0] <= rdata_o.DB_MAX_OUTPUT_PORT_TYPE
+rdata_o[1] <= rdata_o.DB_MAX_OUTPUT_PORT_TYPE
+rdata_o[2] <= rdata_o.DB_MAX_OUTPUT_PORT_TYPE
+
+

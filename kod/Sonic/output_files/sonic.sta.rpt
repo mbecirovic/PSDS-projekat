@@ -1,0 +1,1107 @@
+TimeQuest Timing Analyzer report for sonic
+Mon Jun 19 00:17:57 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; sonic                                                             ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C70F896C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 12.08 MHz ; 12.08 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; clk   ; -81.804 ; -2033.386     ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.531 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -88.380               ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                             ;
++---------+------------------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                      ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; -81.804 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.035      ; 82.875     ;
+; -81.747 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.037      ; 82.820     ;
+; -81.743 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.035      ; 82.814     ;
+; -81.688 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.037      ; 82.761     ;
+; -81.615 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.035      ; 82.686     ;
+; -81.537 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.602     ;
+; -81.509 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.574     ;
+; -81.509 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.574     ;
+; -81.501 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.035      ; 82.572     ;
+; -81.480 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.547     ;
+; -81.476 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.541     ;
+; -81.452 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.519     ;
+; -81.452 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.519     ;
+; -81.451 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.035      ; 82.522     ;
+; -81.448 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.513     ;
+; -81.448 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.513     ;
+; -81.430 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.035      ; 82.501     ;
+; -81.421 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.488     ;
+; -81.393 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.460     ;
+; -81.393 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.460     ;
+; -81.348 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.413     ;
+; -81.339 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.404     ;
+; -81.320 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.385     ;
+; -81.320 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.385     ;
+; -81.282 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.349     ;
+; -81.278 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.343     ;
+; -81.249 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.037      ; 82.322     ;
+; -81.234 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.299     ;
+; -81.223 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.290     ;
+; -81.206 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.271     ;
+; -81.206 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.271     ;
+; -81.184 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.249     ;
+; -81.178 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[7]  ; clk          ; clk         ; 1.000        ; 0.035      ; 82.249     ;
+; -81.163 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.228     ;
+; -81.159 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.035      ; 82.230     ;
+; -81.156 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.221     ;
+; -81.156 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.221     ;
+; -81.154 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.035      ; 82.225     ;
+; -81.150 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.215     ;
+; -81.147 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.212     ;
+; -81.135 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.200     ;
+; -81.135 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.200     ;
+; -81.094 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[12] ; clk          ; clk         ; 1.000        ; 0.035      ; 82.165     ;
+; -81.090 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.157     ;
+; -81.088 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.153     ;
+; -81.086 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.151     ;
+; -81.082 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[9]  ; clk          ; clk         ; 1.000        ; 0.035      ; 82.153     ;
+; -81.038 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[14] ; clk          ; clk         ; 1.000        ; 0.037      ; 82.111     ;
+; -81.036 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.101     ;
+; -81.031 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.098     ;
+; -81.031 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.098     ;
+; -81.027 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.092     ;
+; -81.003 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[8]  ; clk          ; clk         ; 1.000        ; 0.027      ; 82.066     ;
+; -80.986 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.051     ;
+; -80.982 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.049     ;
+; -80.973 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.038     ;
+; -80.972 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.039     ;
+; -80.965 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.030     ;
+; -80.958 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.029      ; 82.023     ;
+; -80.954 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.021     ;
+; -80.954 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.031      ; 82.021     ;
+; -80.916 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.031      ; 81.983     ;
+; -80.912 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.977     ;
+; -80.911 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[7]  ; clk          ; clk         ; 1.000        ; 0.029      ; 81.976     ;
+; -80.899 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.964     ;
+; -80.892 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.957     ;
+; -80.887 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.952     ;
+; -80.883 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[7]  ; clk          ; clk         ; 1.000        ; 0.029      ; 81.948     ;
+; -80.883 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[7]  ; clk          ; clk         ; 1.000        ; 0.029      ; 81.948     ;
+; -80.879 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[6]  ; clk          ; clk         ; 1.000        ; 0.027      ; 81.942     ;
+; -80.864 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.929     ;
+; -80.864 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.929     ;
+; -80.859 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.924     ;
+; -80.859 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.924     ;
+; -80.857 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.031      ; 81.924     ;
+; -80.844 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.909     ;
+; -80.827 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[12] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.892     ;
+; -80.815 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[9]  ; clk          ; clk         ; 1.000        ; 0.029      ; 81.880     ;
+; -80.799 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[12] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.864     ;
+; -80.799 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[12] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.864     ;
+; -80.794 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.859     ;
+; -80.787 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[9]  ; clk          ; clk         ; 1.000        ; 0.029      ; 81.852     ;
+; -80.787 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[9]  ; clk          ; clk         ; 1.000        ; 0.029      ; 81.852     ;
+; -80.785 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.850     ;
+; -80.784 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.849     ;
+; -80.784 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.031      ; 81.851     ;
+; -80.773 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.838     ;
+; -80.771 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[14] ; clk          ; clk         ; 1.000        ; 0.031      ; 81.838     ;
+; -80.743 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[14] ; clk          ; clk         ; 1.000        ; 0.031      ; 81.810     ;
+; -80.743 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[14] ; clk          ; clk         ; 1.000        ; 0.031      ; 81.810     ;
+; -80.736 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[8]  ; clk          ; clk         ; 1.000        ; 0.021      ; 81.793     ;
+; -80.735 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.800     ;
+; -80.714 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.779     ;
+; -80.713 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[7]  ; clk          ; clk         ; 1.000        ; 0.029      ; 81.778     ;
+; -80.708 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[8]  ; clk          ; clk         ; 1.000        ; 0.021      ; 81.765     ;
+; -80.708 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[8]  ; clk          ; clk         ; 1.000        ; 0.021      ; 81.765     ;
+; -80.694 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.759     ;
+; -80.689 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.754     ;
+; -80.670 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.735     ;
+; -80.629 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[12] ; clk          ; clk         ; 1.000        ; 0.029      ; 81.694     ;
++---------+------------------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                        ;
++-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                      ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.531 ; sonic:preuzmiSaSonica|counter50[31]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.795 ; sonic:preuzmiSaSonica|counter50[23]            ; sonic:preuzmiSaSonica|counter50[23]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; sonic:preuzmiSaSonica|duration_of_feedback[11] ; sonic:preuzmiSaSonica|duration_of_feedback[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.802 ; sonic:preuzmiSaSonica|duration_of_feedback[30] ; sonic:preuzmiSaSonica|duration_of_feedback[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.803 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.069      ;
+; 0.805 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805 ; sonic:preuzmiSaSonica|counter50[9]             ; sonic:preuzmiSaSonica|counter50[9]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805 ; sonic:preuzmiSaSonica|counter50[17]            ; sonic:preuzmiSaSonica|counter50[17]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[4]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[7]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[13]            ; sonic:preuzmiSaSonica|counter50[13]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[14]            ; sonic:preuzmiSaSonica|counter50[14]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[15]            ; sonic:preuzmiSaSonica|counter50[15]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[25]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[27]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[29]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; sonic:preuzmiSaSonica|counter50[30]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.810 ; sonic:preuzmiSaSonica|duration_of_feedback[29] ; sonic:preuzmiSaSonica|duration_of_feedback[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.076      ;
+; 0.828 ; sonic:preuzmiSaSonica|counter50[22]            ; sonic:preuzmiSaSonica|counter50[22]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.094      ;
+; 0.835 ; sonic:preuzmiSaSonica|counter50[10]            ; sonic:preuzmiSaSonica|counter50[10]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; sonic:preuzmiSaSonica|counter50[12]            ; sonic:preuzmiSaSonica|counter50[12]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.101      ;
+; 0.838 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[24]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[26]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; sonic:preuzmiSaSonica|counter50[28]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839 ; sonic:preuzmiSaSonica|counter50[5]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; sonic:preuzmiSaSonica|counter50[6]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 1.188 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.454      ;
+; 1.188 ; sonic:preuzmiSaSonica|counter50[9]             ; sonic:preuzmiSaSonica|counter50[10]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.454      ;
+; 1.189 ; sonic:preuzmiSaSonica|counter50[30]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; sonic:preuzmiSaSonica|counter50[13]            ; sonic:preuzmiSaSonica|counter50[14]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; sonic:preuzmiSaSonica|counter50[14]            ; sonic:preuzmiSaSonica|counter50[15]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; sonic:preuzmiSaSonica|counter50[29]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[26]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; sonic:preuzmiSaSonica|counter50[4]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.193 ; sonic:preuzmiSaSonica|duration_of_feedback[29] ; sonic:preuzmiSaSonica|duration_of_feedback[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.459      ;
+; 1.193 ; sonic:preuzmiSaSonica|counter50[0]             ; sonic:preuzmiSaSonica|counter50[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.459      ;
+; 1.214 ; sonic:preuzmiSaSonica|counter50[22]            ; sonic:preuzmiSaSonica|counter50[23]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.480      ;
+; 1.221 ; sonic:preuzmiSaSonica|counter50[12]            ; sonic:preuzmiSaSonica|counter50[13]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.487      ;
+; 1.224 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[25]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[27]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; sonic:preuzmiSaSonica|counter50[28]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225 ; sonic:preuzmiSaSonica|counter50[6]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; sonic:preuzmiSaSonica|counter50[5]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.259 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.525      ;
+; 1.260 ; sonic:preuzmiSaSonica|counter50[29]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; sonic:preuzmiSaSonica|counter50[13]            ; sonic:preuzmiSaSonica|counter50[15]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[27]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; sonic:preuzmiSaSonica|counter50[4]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.264 ; sonic:preuzmiSaSonica|counter50[0]             ; sonic:preuzmiSaSonica|counter50[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.530      ;
+; 1.270 ; sonic:preuzmiSaSonica|counter50[23]            ; sonic:preuzmiSaSonica|counter50[24]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.536      ;
+; 1.292 ; sonic:preuzmiSaSonica|counter50[10]            ; sonic:preuzmiSaSonica|counter50[12]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.558      ;
+; 1.292 ; sonic:preuzmiSaSonica|counter50[12]            ; sonic:preuzmiSaSonica|counter50[14]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.558      ;
+; 1.295 ; sonic:preuzmiSaSonica|counter50[28]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[26]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.561      ;
+; 1.296 ; sonic:preuzmiSaSonica|counter50[5]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.562      ;
+; 1.330 ; sonic:preuzmiSaSonica|counter50[21]            ; sonic:preuzmiSaSonica|counter50[22]            ; clk          ; clk         ; 0.000        ; -0.001     ; 1.595      ;
+; 1.330 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.596      ;
+; 1.330 ; sonic:preuzmiSaSonica|counter50[9]             ; sonic:preuzmiSaSonica|counter50[12]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.596      ;
+; 1.331 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; sonic:preuzmiSaSonica|counter50[4]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.597      ;
+; 1.335 ; sonic:preuzmiSaSonica|counter50[0]             ; sonic:preuzmiSaSonica|counter50[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.601      ;
+; 1.341 ; sonic:preuzmiSaSonica|counter50[23]            ; sonic:preuzmiSaSonica|counter50[25]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.607      ;
+; 1.349 ; sonic:preuzmiSaSonica|counter50[15]            ; sonic:preuzmiSaSonica|counter50[17]            ; clk          ; clk         ; 0.000        ; 0.003      ; 1.618      ;
+; 1.352 ; sonic:preuzmiSaSonica|counter50[7]             ; sonic:preuzmiSaSonica|counter50[9]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.618      ;
+; 1.363 ; sonic:preuzmiSaSonica|counter50[10]            ; sonic:preuzmiSaSonica|counter50[13]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.629      ;
+; 1.363 ; sonic:preuzmiSaSonica|counter50[12]            ; sonic:preuzmiSaSonica|counter50[15]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.629      ;
+; 1.364 ; sonic:preuzmiSaSonica|counter50[8]             ; sonic:preuzmiSaSonica|counter50[9]             ; clk          ; clk         ; 0.000        ; -0.001     ; 1.629      ;
+; 1.366 ; sonic:preuzmiSaSonica|counter50[28]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.632      ;
+; 1.366 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[27]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.632      ;
+; 1.366 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.632      ;
+; 1.366 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.632      ;
+; 1.369 ; sonic:preuzmiSaSonica|counter50[11]            ; sonic:preuzmiSaSonica|counter50[12]            ; clk          ; clk         ; 0.000        ; -0.001     ; 1.634      ;
+; 1.372 ; sonic:preuzmiSaSonica|counter50[16]            ; sonic:preuzmiSaSonica|counter50[17]            ; clk          ; clk         ; 0.000        ; -0.001     ; 1.637      ;
+; 1.373 ; sonic:preuzmiSaSonica|counter50[22]            ; sonic:preuzmiSaSonica|counter50[24]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.639      ;
+; 1.401 ; sonic:preuzmiSaSonica|counter50[21]            ; sonic:preuzmiSaSonica|counter50[23]            ; clk          ; clk         ; 0.000        ; -0.001     ; 1.666      ;
+; 1.401 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.667      ;
+; 1.401 ; sonic:preuzmiSaSonica|counter50[9]             ; sonic:preuzmiSaSonica|counter50[13]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.667      ;
+; 1.402 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.668      ;
+; 1.402 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.668      ;
+; 1.402 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.668      ;
+; 1.403 ; sonic:preuzmiSaSonica|counter50[14]            ; sonic:preuzmiSaSonica|counter50[17]            ; clk          ; clk         ; 0.000        ; 0.003      ; 1.672      ;
+; 1.406 ; sonic:preuzmiSaSonica|counter50[0]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.672      ;
+; 1.412 ; sonic:preuzmiSaSonica|counter50[23]            ; sonic:preuzmiSaSonica|counter50[26]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.678      ;
+; 1.423 ; sonic:preuzmiSaSonica|counter50[7]             ; sonic:preuzmiSaSonica|counter50[10]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.689      ;
+; 1.434 ; sonic:preuzmiSaSonica|counter50[10]            ; sonic:preuzmiSaSonica|counter50[14]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.700      ;
+; 1.435 ; sonic:preuzmiSaSonica|counter50[8]             ; sonic:preuzmiSaSonica|counter50[10]            ; clk          ; clk         ; 0.000        ; -0.001     ; 1.700      ;
+; 1.437 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.703      ;
+; 1.437 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.703      ;
+; 1.437 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.703      ;
++-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[10]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[10]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[11]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[11]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[12]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[12]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[13]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[13]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[14]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[14]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[15]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[15]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[16]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[16]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[17]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[17]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[18]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[18]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[19]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[19]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[20]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[20]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[21]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[21]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[31]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[31]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[4]   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; echo      ; clk        ; 5.442 ; 5.442 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; echo      ; clk        ; -4.450 ; -4.450 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Hex[*]    ; clk        ; 14.421 ; 14.421 ; Rise       ; clk             ;
+;  Hex[0]   ; clk        ; 13.537 ; 13.537 ; Rise       ; clk             ;
+;  Hex[2]   ; clk        ; 14.421 ; 14.421 ; Rise       ; clk             ;
+;  Hex[3]   ; clk        ; 13.717 ; 13.717 ; Rise       ; clk             ;
+;  Hex[4]   ; clk        ; 13.227 ; 13.227 ; Rise       ; clk             ;
+;  Hex[5]   ; clk        ; 13.600 ; 13.600 ; Rise       ; clk             ;
+;  Hex[6]   ; clk        ; 13.583 ; 13.583 ; Rise       ; clk             ;
+; trig      ; clk        ; 12.751 ; 12.751 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Hex[*]    ; clk        ; 10.022 ; 10.022 ; Rise       ; clk             ;
+;  Hex[0]   ; clk        ; 10.022 ; 10.022 ; Rise       ; clk             ;
+;  Hex[2]   ; clk        ; 10.905 ; 10.905 ; Rise       ; clk             ;
+;  Hex[3]   ; clk        ; 10.202 ; 10.202 ; Rise       ; clk             ;
+;  Hex[4]   ; clk        ; 10.615 ; 10.615 ; Rise       ; clk             ;
+;  Hex[5]   ; clk        ; 10.216 ; 10.216 ; Rise       ; clk             ;
+;  Hex[6]   ; clk        ; 10.199 ; 10.199 ; Rise       ; clk             ;
+; trig      ; clk        ; 10.511 ; 10.511 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; clk   ; -36.166 ; -869.607      ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.243 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -88.380               ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                             ;
++---------+------------------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                      ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; -36.166 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.035      ; 37.233     ;
+; -36.164 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.032      ; 37.228     ;
+; -36.146 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.032      ; 37.210     ;
+; -36.125 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.035      ; 37.192     ;
+; -36.064 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.032      ; 37.128     ;
+; -36.062 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.029      ; 37.123     ;
+; -36.060 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.118     ;
+; -36.054 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.029      ; 37.115     ;
+; -36.054 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.029      ; 37.115     ;
+; -36.052 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.110     ;
+; -36.052 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.110     ;
+; -36.042 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.100     ;
+; -36.034 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.092     ;
+; -36.034 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.092     ;
+; -36.021 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.029      ; 37.082     ;
+; -36.013 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.029      ; 37.074     ;
+; -36.013 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.029      ; 37.074     ;
+; -36.002 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.032      ; 37.066     ;
+; -35.985 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.029      ; 37.046     ;
+; -35.983 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.041     ;
+; -35.965 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.032      ; 37.029     ;
+; -35.965 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.023     ;
+; -35.960 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.018     ;
+; -35.952 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.010     ;
+; -35.952 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.026      ; 37.010     ;
+; -35.951 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.032      ; 37.015     ;
+; -35.944 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.029      ; 37.005     ;
+; -35.904 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.965     ;
+; -35.902 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.963     ;
+; -35.902 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.960     ;
+; -35.900 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.958     ;
+; -35.898 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.956     ;
+; -35.894 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.035      ; 36.961     ;
+; -35.890 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.948     ;
+; -35.890 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.948     ;
+; -35.884 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.942     ;
+; -35.883 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.941     ;
+; -35.882 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.940     ;
+; -35.863 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.924     ;
+; -35.861 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.922     ;
+; -35.861 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.919     ;
+; -35.853 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.911     ;
+; -35.853 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.911     ;
+; -35.847 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.905     ;
+; -35.842 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.032      ; 36.906     ;
+; -35.839 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.897     ;
+; -35.839 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.897     ;
+; -35.836 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.897     ;
+; -35.834 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.892     ;
+; -35.829 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.032      ; 36.893     ;
+; -35.821 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.879     ;
+; -35.816 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.874     ;
+; -35.810 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[12] ; clk          ; clk         ; 1.000        ; 0.032      ; 36.874     ;
+; -35.808 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[7]  ; clk          ; clk         ; 1.000        ; 0.032      ; 36.872     ;
+; -35.802 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.860     ;
+; -35.800 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.858     ;
+; -35.795 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[31] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.856     ;
+; -35.790 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[14] ; clk          ; clk         ; 1.000        ; 0.035      ; 36.857     ;
+; -35.790 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.851     ;
+; -35.784 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.842     ;
+; -35.782 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.843     ;
+; -35.782 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.843     ;
+; -35.775 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[9]  ; clk          ; clk         ; 1.000        ; 0.032      ; 36.839     ;
+; -35.770 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.828     ;
+; -35.752 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[8]  ; clk          ; clk         ; 1.000        ; 0.026      ; 36.810     ;
+; -35.740 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.798     ;
+; -35.738 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.796     ;
+; -35.738 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.796     ;
+; -35.734 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[18] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.792     ;
+; -35.730 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.788     ;
+; -35.730 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.788     ;
+; -35.725 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.783     ;
+; -35.717 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.775     ;
+; -35.717 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.775     ;
+; -35.713 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[17] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.774     ;
+; -35.706 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[12] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.764     ;
+; -35.704 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[7]  ; clk          ; clk         ; 1.000        ; 0.026      ; 36.762     ;
+; -35.703 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.761     ;
+; -35.701 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[15] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.759     ;
+; -35.698 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[12] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.756     ;
+; -35.698 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[12] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.756     ;
+; -35.696 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[7]  ; clk          ; clk         ; 1.000        ; 0.026      ; 36.754     ;
+; -35.696 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[7]  ; clk          ; clk         ; 1.000        ; 0.026      ; 36.754     ;
+; -35.689 ; sonic:preuzmiSaSonica|duration_of_feedback[3]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.747     ;
+; -35.687 ; sonic:preuzmiSaSonica|duration_of_feedback[5]  ; sonic:preuzmiSaSonica|distanca[10] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.745     ;
+; -35.686 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[14] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.747     ;
+; -35.681 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|distanca[6]  ; clk          ; clk         ; 1.000        ; 0.026      ; 36.739     ;
+; -35.678 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[14] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.739     ;
+; -35.678 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[14] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.739     ;
+; -35.672 ; sonic:preuzmiSaSonica|duration_of_feedback[0]  ; sonic:preuzmiSaSonica|distanca[16] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.730     ;
+; -35.671 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[9]  ; clk          ; clk         ; 1.000        ; 0.026      ; 36.729     ;
+; -35.668 ; sonic:preuzmiSaSonica|duration_of_feedback[7]  ; sonic:preuzmiSaSonica|distanca[21] ; clk          ; clk         ; 1.000        ; 0.029      ; 36.729     ;
+; -35.666 ; sonic:preuzmiSaSonica|duration_of_feedback[7]  ; sonic:preuzmiSaSonica|distanca[19] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.724     ;
+; -35.663 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[9]  ; clk          ; clk         ; 1.000        ; 0.026      ; 36.721     ;
+; -35.663 ; sonic:preuzmiSaSonica|duration_of_feedback[6]  ; sonic:preuzmiSaSonica|distanca[9]  ; clk          ; clk         ; 1.000        ; 0.026      ; 36.721     ;
+; -35.661 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[13] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.719     ;
+; -35.648 ; sonic:preuzmiSaSonica|duration_of_feedback[7]  ; sonic:preuzmiSaSonica|distanca[20] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.706     ;
+; -35.648 ; sonic:preuzmiSaSonica|duration_of_feedback[1]  ; sonic:preuzmiSaSonica|distanca[11] ; clk          ; clk         ; 1.000        ; 0.026      ; 36.706     ;
+; -35.648 ; sonic:preuzmiSaSonica|duration_of_feedback[4]  ; sonic:preuzmiSaSonica|distanca[8]  ; clk          ; clk         ; 1.000        ; 0.020      ; 36.700     ;
+; -35.640 ; sonic:preuzmiSaSonica|duration_of_feedback[31] ; sonic:preuzmiSaSonica|distanca[8]  ; clk          ; clk         ; 1.000        ; 0.020      ; 36.692     ;
++---------+------------------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                        ;
++-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                      ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.243 ; sonic:preuzmiSaSonica|counter50[31]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.356 ; sonic:preuzmiSaSonica|counter50[23]            ; sonic:preuzmiSaSonica|counter50[23]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; sonic:preuzmiSaSonica|duration_of_feedback[11] ; sonic:preuzmiSaSonica|duration_of_feedback[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.358 ; sonic:preuzmiSaSonica|duration_of_feedback[30] ; sonic:preuzmiSaSonica|duration_of_feedback[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; sonic:preuzmiSaSonica|counter50[9]             ; sonic:preuzmiSaSonica|counter50[9]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; sonic:preuzmiSaSonica|counter50[17]            ; sonic:preuzmiSaSonica|counter50[17]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; sonic:preuzmiSaSonica|duration_of_feedback[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[25]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[27]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; sonic:preuzmiSaSonica|counter50[4]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; sonic:preuzmiSaSonica|counter50[7]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; sonic:preuzmiSaSonica|counter50[13]            ; sonic:preuzmiSaSonica|counter50[13]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; sonic:preuzmiSaSonica|counter50[14]            ; sonic:preuzmiSaSonica|counter50[14]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; sonic:preuzmiSaSonica|counter50[15]            ; sonic:preuzmiSaSonica|counter50[15]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; sonic:preuzmiSaSonica|counter50[29]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; sonic:preuzmiSaSonica|counter50[30]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; sonic:preuzmiSaSonica|duration_of_feedback[29] ; sonic:preuzmiSaSonica|duration_of_feedback[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.367 ; sonic:preuzmiSaSonica|counter50[22]            ; sonic:preuzmiSaSonica|counter50[22]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.369 ; sonic:preuzmiSaSonica|counter50[10]            ; sonic:preuzmiSaSonica|counter50[10]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; sonic:preuzmiSaSonica|counter50[12]            ; sonic:preuzmiSaSonica|counter50[12]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[24]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[26]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; sonic:preuzmiSaSonica|counter50[5]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; sonic:preuzmiSaSonica|counter50[6]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; sonic:preuzmiSaSonica|counter50[28]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.497 ; sonic:preuzmiSaSonica|counter50[9]             ; sonic:preuzmiSaSonica|counter50[10]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.649      ;
+; 0.498 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[26]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; sonic:preuzmiSaSonica|counter50[30]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; sonic:preuzmiSaSonica|duration_of_feedback[29] ; sonic:preuzmiSaSonica|duration_of_feedback[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; sonic:preuzmiSaSonica|counter50[13]            ; sonic:preuzmiSaSonica|counter50[14]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; sonic:preuzmiSaSonica|counter50[14]            ; sonic:preuzmiSaSonica|counter50[15]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; sonic:preuzmiSaSonica|counter50[29]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; sonic:preuzmiSaSonica|counter50[4]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.502 ; sonic:preuzmiSaSonica|counter50[0]             ; sonic:preuzmiSaSonica|counter50[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.654      ;
+; 0.507 ; sonic:preuzmiSaSonica|counter50[22]            ; sonic:preuzmiSaSonica|counter50[23]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.659      ;
+; 0.509 ; sonic:preuzmiSaSonica|counter50[12]            ; sonic:preuzmiSaSonica|counter50[13]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.511 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[25]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[27]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; sonic:preuzmiSaSonica|counter50[6]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; sonic:preuzmiSaSonica|counter50[28]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; sonic:preuzmiSaSonica|counter50[5]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.533 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[27]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534 ; sonic:preuzmiSaSonica|counter50[29]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; sonic:preuzmiSaSonica|counter50[13]            ; sonic:preuzmiSaSonica|counter50[15]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; sonic:preuzmiSaSonica|counter50[4]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.686      ;
+; 0.537 ; sonic:preuzmiSaSonica|counter50[0]             ; sonic:preuzmiSaSonica|counter50[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.689      ;
+; 0.544 ; sonic:preuzmiSaSonica|counter50[10]            ; sonic:preuzmiSaSonica|counter50[12]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; sonic:preuzmiSaSonica|counter50[12]            ; sonic:preuzmiSaSonica|counter50[14]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.546 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[26]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; sonic:preuzmiSaSonica|counter50[28]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; sonic:preuzmiSaSonica|counter50[5]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.699      ;
+; 0.549 ; sonic:preuzmiSaSonica|counter50[23]            ; sonic:preuzmiSaSonica|counter50[24]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.701      ;
+; 0.567 ; sonic:preuzmiSaSonica|counter50[9]             ; sonic:preuzmiSaSonica|counter50[12]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.569 ; sonic:preuzmiSaSonica|counter50[21]            ; sonic:preuzmiSaSonica|counter50[22]            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.720      ;
+; 0.569 ; sonic:preuzmiSaSonica|counter50[4]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.721      ;
+; 0.572 ; sonic:preuzmiSaSonica|counter50[0]             ; sonic:preuzmiSaSonica|counter50[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.724      ;
+; 0.577 ; sonic:preuzmiSaSonica|counter50[8]             ; sonic:preuzmiSaSonica|counter50[9]             ; clk          ; clk         ; 0.000        ; -0.001     ; 0.728      ;
+; 0.578 ; sonic:preuzmiSaSonica|counter50[15]            ; sonic:preuzmiSaSonica|counter50[17]            ; clk          ; clk         ; 0.000        ; 0.003      ; 0.733      ;
+; 0.579 ; sonic:preuzmiSaSonica|counter50[10]            ; sonic:preuzmiSaSonica|counter50[13]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; sonic:preuzmiSaSonica|counter50[12]            ; sonic:preuzmiSaSonica|counter50[15]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; sonic:preuzmiSaSonica|counter50[11]            ; sonic:preuzmiSaSonica|counter50[12]            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.730      ;
+; 0.581 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[27]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.733      ;
+; 0.582 ; sonic:preuzmiSaSonica|counter50[28]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.734      ;
+; 0.583 ; sonic:preuzmiSaSonica|counter50[16]            ; sonic:preuzmiSaSonica|counter50[17]            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.734      ;
+; 0.584 ; sonic:preuzmiSaSonica|counter50[23]            ; sonic:preuzmiSaSonica|counter50[25]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.736      ;
+; 0.589 ; sonic:preuzmiSaSonica|counter50[7]             ; sonic:preuzmiSaSonica|counter50[9]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.741      ;
+; 0.601 ; sonic:preuzmiSaSonica|counter50[22]            ; sonic:preuzmiSaSonica|counter50[24]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.753      ;
+; 0.602 ; sonic:preuzmiSaSonica|counter50[9]             ; sonic:preuzmiSaSonica|counter50[13]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.754      ;
+; 0.603 ; sonic:preuzmiSaSonica|counter50[1]             ; sonic:preuzmiSaSonica|counter50[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.603 ; sonic:preuzmiSaSonica|counter50[25]            ; sonic:preuzmiSaSonica|counter50[29]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.603 ; sonic:preuzmiSaSonica|counter50[2]             ; sonic:preuzmiSaSonica|counter50[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.603 ; sonic:preuzmiSaSonica|counter50[27]            ; sonic:preuzmiSaSonica|counter50[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.604 ; sonic:preuzmiSaSonica|counter50[21]            ; sonic:preuzmiSaSonica|counter50[23]            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.755      ;
+; 0.607 ; sonic:preuzmiSaSonica|counter50[0]             ; sonic:preuzmiSaSonica|counter50[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.759      ;
+; 0.612 ; sonic:preuzmiSaSonica|counter50[8]             ; sonic:preuzmiSaSonica|counter50[10]            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.763      ;
+; 0.614 ; sonic:preuzmiSaSonica|counter50[10]            ; sonic:preuzmiSaSonica|counter50[14]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.766      ;
+; 0.614 ; sonic:preuzmiSaSonica|counter50[11]            ; sonic:preuzmiSaSonica|counter50[13]            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.765      ;
+; 0.616 ; sonic:preuzmiSaSonica|counter50[24]            ; sonic:preuzmiSaSonica|counter50[28]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.768      ;
+; 0.616 ; sonic:preuzmiSaSonica|counter50[26]            ; sonic:preuzmiSaSonica|counter50[30]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.768      ;
+; 0.616 ; sonic:preuzmiSaSonica|counter50[3]             ; sonic:preuzmiSaSonica|counter50[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.768      ;
+; 0.618 ; sonic:preuzmiSaSonica|counter50[14]            ; sonic:preuzmiSaSonica|counter50[17]            ; clk          ; clk         ; 0.000        ; 0.003      ; 0.773      ;
+; 0.619 ; sonic:preuzmiSaSonica|counter50[23]            ; sonic:preuzmiSaSonica|counter50[26]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.771      ;
++-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|counter50[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[10]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[10]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[11]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[11]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[12]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[12]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[13]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[13]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[14]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[14]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[15]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[15]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[16]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[16]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[17]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[17]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[18]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[18]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[19]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[19]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[20]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[20]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[21]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[21]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[31]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[31]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; sonic:preuzmiSaSonica|distanca[4]   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; echo      ; clk        ; 3.004 ; 3.004 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; echo      ; clk        ; -2.508 ; -2.508 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Hex[*]    ; clk        ; 7.347 ; 7.347 ; Rise       ; clk             ;
+;  Hex[0]   ; clk        ; 7.026 ; 7.026 ; Rise       ; clk             ;
+;  Hex[2]   ; clk        ; 7.347 ; 7.347 ; Rise       ; clk             ;
+;  Hex[3]   ; clk        ; 7.106 ; 7.106 ; Rise       ; clk             ;
+;  Hex[4]   ; clk        ; 6.936 ; 6.936 ; Rise       ; clk             ;
+;  Hex[5]   ; clk        ; 7.007 ; 7.007 ; Rise       ; clk             ;
+;  Hex[6]   ; clk        ; 7.024 ; 7.024 ; Rise       ; clk             ;
+; trig      ; clk        ; 6.654 ; 6.654 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Hex[*]    ; clk        ; 5.456 ; 5.456 ; Rise       ; clk             ;
+;  Hex[0]   ; clk        ; 5.456 ; 5.456 ; Rise       ; clk             ;
+;  Hex[2]   ; clk        ; 5.777 ; 5.777 ; Rise       ; clk             ;
+;  Hex[3]   ; clk        ; 5.536 ; 5.536 ; Rise       ; clk             ;
+;  Hex[4]   ; clk        ; 5.769 ; 5.769 ; Rise       ; clk             ;
+;  Hex[5]   ; clk        ; 5.496 ; 5.496 ; Rise       ; clk             ;
+;  Hex[6]   ; clk        ; 5.486 ; 5.486 ; Rise       ; clk             ;
+; trig      ; clk        ; 5.643 ; 5.643 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -81.804   ; 0.243 ; N/A      ; N/A     ; -1.380              ;
+;  clk             ; -81.804   ; 0.243 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -2033.386 ; 0.0   ; 0.0      ; 0.0     ; -88.38              ;
+;  clk             ; -2033.386 ; 0.000 ; N/A      ; N/A     ; -88.380             ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; echo      ; clk        ; 5.442 ; 5.442 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; echo      ; clk        ; -2.508 ; -2.508 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Hex[*]    ; clk        ; 14.421 ; 14.421 ; Rise       ; clk             ;
+;  Hex[0]   ; clk        ; 13.537 ; 13.537 ; Rise       ; clk             ;
+;  Hex[2]   ; clk        ; 14.421 ; 14.421 ; Rise       ; clk             ;
+;  Hex[3]   ; clk        ; 13.717 ; 13.717 ; Rise       ; clk             ;
+;  Hex[4]   ; clk        ; 13.227 ; 13.227 ; Rise       ; clk             ;
+;  Hex[5]   ; clk        ; 13.600 ; 13.600 ; Rise       ; clk             ;
+;  Hex[6]   ; clk        ; 13.583 ; 13.583 ; Rise       ; clk             ;
+; trig      ; clk        ; 12.751 ; 12.751 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Hex[*]    ; clk        ; 5.456 ; 5.456 ; Rise       ; clk             ;
+;  Hex[0]   ; clk        ; 5.456 ; 5.456 ; Rise       ; clk             ;
+;  Hex[2]   ; clk        ; 5.777 ; 5.777 ; Rise       ; clk             ;
+;  Hex[3]   ; clk        ; 5.536 ; 5.536 ; Rise       ; clk             ;
+;  Hex[4]   ; clk        ; 5.769 ; 5.769 ; Rise       ; clk             ;
+;  Hex[5]   ; clk        ; 5.496 ; 5.496 ; Rise       ; clk             ;
+;  Hex[6]   ; clk        ; 5.486 ; 5.486 ; Rise       ; clk             ;
+; trig      ; clk        ; 5.643 ; 5.643 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; clk        ; clk      ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; clk        ; clk      ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 55    ; 55   ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 166   ; 166  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Jun 19 00:17:55 2023
+Info: Command: quartus_sta sonic -c sonic
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'sonic.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -81.804
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -81.804     -2033.386 clk 
+Info (332146): Worst-case hold slack is 0.531
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.531         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -88.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -36.166
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -36.166      -869.607 clk 
+Info (332146): Worst-case hold slack is 0.243
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.243         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -88.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4622 megabytes
+    Info: Processing ended: Mon Jun 19 00:17:57 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity buzzerTest is
+	port(clk: in std_logic;
+		  sound_length: in std_logic_vector(2 downto 0);
+		  enable: in std_logic;
+		  sound: out std_logic);
+end buzzerTest;
+
+architecture b of buzzerTest is
+		signal play := 0;
+		component buzzerTest is
+			port(clk: in std_logic;
+			sound_length: in std_logic_vector(2 downto 0);
+			enable: in std_logic;
+			sound: out std_logic);
+		end component;
+		testiranje: port map buzzerTest(clk,"101",enable,sound)
+		play <= enable;
+end b; 
