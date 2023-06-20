@@ -1,7 +1,5 @@
 |upravitelj
-clk => buraz:za_buraza.clk
-clk => counterUpisa[0].CLK
-clk => counterUpisa[1].CLK
+clk => player:za_playera.clk
 clk => counter50[0].CLK
 clk => counter50[1].CLK
 clk => counter50[2].CLK
@@ -197,8 +195,6 @@ rst => counter50[3].ENA
 rst => counter50[2].ENA
 rst => counter50[1].ENA
 rst => counter50[0].ENA
-rst => counterUpisa[1].ENA
-rst => counterUpisa[0].ENA
 opcija[0] => Equal0.IN1
 opcija[0] => Equal1.IN0
 opcija[0] => Equal2.IN1
@@ -209,9 +205,13 @@ opcija[1] => Equal2.IN0
 opcija[1] => Equal3.IN0
 trig <= sonic:za_sonica.trig
 echo => sonic:za_sonica.echo
-adresniVektorKompozicije[0] => fifi:za_fifi.raddr_i[0]
-adresniVektorKompozicije[1] => fifi:za_fifi.raddr_i[1]
-sound <= buraz:za_buraza.sound
+adresniVektorKompozicije[0] => seg27:za_Hex4.i[0]
+adresniVektorKompozicije[0] => RAM:za_RAM.waddr_i[0]
+adresniVektorKompozicije[0] => RAM:za_RAM.raddr_i[0]
+adresniVektorKompozicije[1] => seg27:za_Hex4.i[1]
+adresniVektorKompozicije[1] => RAM:za_RAM.waddr_i[1]
+adresniVektorKompozicije[1] => RAM:za_RAM.raddr_i[1]
+sound <= player:za_playera.sound
 Hex0[0] <= seg27:za_Hex0.o[0]
 Hex0[1] <= seg27:za_Hex0.o[1]
 Hex0[2] <= seg27:za_Hex0.o[2]
@@ -221,16 +221,16 @@ Hex0[5] <= seg27:za_Hex0.o[5]
 Hex0[6] <= seg27:za_Hex0.o[6]
 adr_tona_ispis[0] <= adr_tona_ispis.DB_MAX_OUTPUT_PORT_TYPE
 adr_tona_ispis[1] <= adr_tona_ispis.DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[0] <= a_ton5[0].DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[1] <= a_ton5[1].DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[2] <= a_ton4[0].DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[3] <= a_ton4[1].DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[4] <= a_ton3[0].DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[5] <= a_ton3[1].DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[6] <= a_ton2[0].DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[7] <= a_ton2[1].DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[8] <= a_ton1[0].DB_MAX_OUTPUT_PORT_TYPE
-kompozicija_upis_check[9] <= a_ton1[1].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[0] <= wdata_i[0].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[1] <= wdata_i[1].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[2] <= wdata_i[2].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[3] <= wdata_i[3].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[4] <= wdata_i[4].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[5] <= wdata_i[5].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[6] <= wdata_i[6].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[7] <= wdata_i[7].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[8] <= wdata_i[8].DB_MAX_OUTPUT_PORT_TYPE
+kompozicija_upis_check[9] <= wdata_i[9].DB_MAX_OUTPUT_PORT_TYPE
 Hex4[0] <= seg27:za_Hex4.o[0]
 Hex4[1] <= seg27:za_Hex4.o[1]
 Hex4[2] <= seg27:za_Hex4.o[2]
@@ -238,10 +238,9 @@ Hex4[3] <= seg27:za_Hex4.o[3]
 Hex4[4] <= seg27:za_Hex4.o[4]
 Hex4[5] <= seg27:za_Hex4.o[5]
 Hex4[6] <= seg27:za_Hex4.o[6]
-full_FIFO <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|upravitelj|buraz:za_buraza
+|upravitelj|player:za_playera
 clk => buzzer:za_buzzer.clk
 clk => counter50[0].CLK
 clk => counter50[1].CLK
@@ -460,7 +459,7 @@ composition[9] => Mux1.IN10
 sound <= buzzer:za_buzzer.sound
 
 
-|upravitelj|buraz:za_buraza|ROM:za_ROM
+|upravitelj|player:za_playera|ROM:za_ROM
 re_i => rdata_o.OUTPUTSELECT
 re_i => rdata_o.OUTPUTSELECT
 re_i => rdata_o.OUTPUTSELECT
@@ -474,7 +473,7 @@ rdata_o[1] <= rdata_o.DB_MAX_OUTPUT_PORT_TYPE
 rdata_o[2] <= rdata_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|upravitelj|buraz:za_buraza|buzzer:za_buzzer
+|upravitelj|player:za_playera|buzzer:za_buzzer
 clk => counter50[0].CLK
 clk => counter50[1].CLK
 clk => counter50[2].CLK
@@ -852,7 +851,7 @@ o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
 o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|upravitelj|fifi:za_fifi
+|upravitelj|RAM:za_RAM
 rst => ram[0][0].ACLR
 rst => ram[0][1].ACLR
 rst => ram[0][2].ACLR

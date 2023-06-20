@@ -717,7 +717,7 @@ GND                          : M20       : gnd    :                   :         
 GND*                         : M21       :        :                   :         : 5         :                
 GND*                         : M22       :        :                   :         : 5         :                
 GND*                         : M23       :        :                   :         : 5         :                
-full_FIFO                    : M24       : output : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : M24       :        :                   :         : 5         :                
 GND*                         : M25       :        :                   :         : 5         :                
 GND*                         : M26       :        :                   :         : 5         :                
 GND*                         : M27       :        :                   :         : 5         :                

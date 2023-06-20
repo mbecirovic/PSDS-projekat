@@ -3,144 +3,144 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -80.654
-TNS   : -2794.717
+Slack : -80.571
+TNS   : -2791.353
 
 Type  : Slow Model Setup 'state.SVIRANJE'
-Slack : -3.046
-TNS   : -32.208
-
-Type  : Slow Model Setup 'counterUpisa[0]'
-Slack : -2.338
-TNS   : -34.970
+Slack : -5.731
+TNS   : -62.065
 
 Type  : Slow Model Setup 'sekunde[0]'
-Slack : -1.362
-TNS   : -8.883
+Slack : -2.693
+TNS   : -25.070
 
-Type  : Slow Model Hold 'clk'
-Slack : -2.679
-TNS   : -125.813
-
-Type  : Slow Model Hold 'sekunde[0]'
-Slack : -1.305
-TNS   : -16.842
-
-Type  : Slow Model Hold 'state.SVIRANJE'
-Slack : 0.639
+Type  : Slow Model Setup 'adresniVektorKompozicije[0]'
+Slack : 0.815
 TNS   : 0.000
 
-Type  : Slow Model Hold 'counterUpisa[0]'
-Slack : 1.115
+Type  : Slow Model Hold 'adresniVektorKompozicije[0]'
+Slack : -3.666
+TNS   : -67.006
+
+Type  : Slow Model Hold 'sekunde[0]'
+Slack : -1.753
+TNS   : -31.596
+
+Type  : Slow Model Hold 'clk'
+Slack : -1.274
+TNS   : -75.649
+
+Type  : Slow Model Hold 'state.SVIRANJE'
+Slack : 0.924
 TNS   : 0.000
 
 Type  : Slow Model Recovery 'clk'
-Slack : -3.104
-TNS   : -241.056
-
-Type  : Slow Model Recovery 'counterUpisa[0]'
-Slack : -0.262
-TNS   : -0.262
+Slack : -3.425
+TNS   : -215.348
 
 Type  : Slow Model Recovery 'sekunde[0]'
-Slack : 1.032
+Slack : 0.627
 TNS   : 0.000
 
-Type  : Slow Model Removal 'sekunde[0]'
-Slack : -2.979
-TNS   : -67.927
+Type  : Slow Model Recovery 'adresniVektorKompozicije[0]'
+Slack : 3.173
+TNS   : 0.000
 
-Type  : Slow Model Removal 'counterUpisa[0]'
-Slack : -0.756
-TNS   : -9.155
+Type  : Slow Model Removal 'adresniVektorKompozicije[0]'
+Slack : -4.565
+TNS   : -78.863
+
+Type  : Slow Model Removal 'sekunde[0]'
+Slack : -2.545
+TNS   : -54.569
 
 Type  : Slow Model Removal 'clk'
-Slack : -0.295
-TNS   : -18.041
+Slack : -0.014
+TNS   : -0.868
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.380
-TNS   : -347.380
+TNS   : -345.380
+
+Type  : Slow Model Minimum Pulse Width 'adresniVektorKompozicije[0]'
+Slack : -1.222
+TNS   : -1.222
 
 Type  : Slow Model Minimum Pulse Width 'state.SVIRANJE'
 Slack : -0.500
 TNS   : -10.000
-
-Type  : Slow Model Minimum Pulse Width 'counterUpisa[0]'
-Slack : 0.500
-TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'sekunde[0]'
 Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'clk'
-Slack : -35.768
-TNS   : -1089.185
+Slack : -35.602
+TNS   : -1092.667
 
 Type  : Fast Model Setup 'state.SVIRANJE'
-Slack : -0.976
-TNS   : -7.617
-
-Type  : Fast Model Setup 'counterUpisa[0]'
-Slack : -0.759
-TNS   : -6.575
+Slack : -2.594
+TNS   : -27.689
 
 Type  : Fast Model Setup 'sekunde[0]'
-Slack : -0.154
-TNS   : -0.367
+Slack : -0.771
+TNS   : -4.838
 
-Type  : Fast Model Hold 'clk'
-Slack : -1.670
-TNS   : -101.984
-
-Type  : Fast Model Hold 'sekunde[0]'
-Slack : -0.554
-TNS   : -7.327
-
-Type  : Fast Model Hold 'state.SVIRANJE'
-Slack : 0.407
+Type  : Fast Model Setup 'adresniVektorKompozicije[0]'
+Slack : 0.948
 TNS   : 0.000
 
-Type  : Fast Model Hold 'counterUpisa[0]'
-Slack : 0.435
+Type  : Fast Model Hold 'adresniVektorKompozicije[0]'
+Slack : -2.056
+TNS   : -35.189
+
+Type  : Fast Model Hold 'clk'
+Slack : -0.999
+TNS   : -68.737
+
+Type  : Fast Model Hold 'sekunde[0]'
+Slack : -0.945
+TNS   : -16.549
+
+Type  : Fast Model Hold 'state.SVIRANJE'
+Slack : 0.220
 TNS   : 0.000
 
 Type  : Fast Model Recovery 'clk'
-Slack : -0.981
-TNS   : -66.086
-
-Type  : Fast Model Recovery 'counterUpisa[0]'
-Slack : 0.112
-TNS   : 0.000
+Slack : -1.137
+TNS   : -70.044
 
 Type  : Fast Model Recovery 'sekunde[0]'
-Slack : 0.971
+Slack : 1.011
 TNS   : 0.000
 
+Type  : Fast Model Recovery 'adresniVektorKompozicije[0]'
+Slack : 1.949
+TNS   : 0.000
+
+Type  : Fast Model Removal 'adresniVektorKompozicije[0]'
+Slack : -2.245
+TNS   : -36.784
+
 Type  : Fast Model Removal 'sekunde[0]'
-Slack : -1.237
-TNS   : -27.493
+Slack : -1.074
+TNS   : -24.278
 
 Type  : Fast Model Removal 'clk'
-Slack : -0.559
-TNS   : -35.031
-
-Type  : Fast Model Removal 'counterUpisa[0]'
-Slack : -0.236
-TNS   : -1.675
+Slack : -0.348
+TNS   : -22.484
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.380
-TNS   : -347.380
+TNS   : -345.380
+
+Type  : Fast Model Minimum Pulse Width 'adresniVektorKompozicije[0]'
+Slack : -1.222
+TNS   : -1.222
 
 Type  : Fast Model Minimum Pulse Width 'state.SVIRANJE'
 Slack : -0.500
 TNS   : -10.000
-
-Type  : Fast Model Minimum Pulse Width 'counterUpisa[0]'
-Slack : 0.500
-TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'sekunde[0]'
 Slack : 0.500

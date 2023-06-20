@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity buraz is
+entity player is
 	port(clk: in std_logic;
 		  enable: in std_logic;
 		  composition: in std_logic_vector(9 downto 0);
 		  sound: out std_logic
 	);
-end buraz;
+end player;
 
-architecture buraz_arch of buraz is
+architecture player_arch of player is
 	signal citaj: std_logic := '0'; --postavljamo na 0 ako je sve procitano
 	signal play: std_logic := '0';
 	signal read_address: std_logic_vector(1 downto 0) := "00";
@@ -85,4 +85,4 @@ architecture buraz_arch of buraz is
 	za_ROM: ROM port map(citaj, read_address, sound_length);
 	za_buzzer: buzzer port map(clk, sound_length, play, sound_signal);
 		
-end buraz_arch;
+end player_arch;

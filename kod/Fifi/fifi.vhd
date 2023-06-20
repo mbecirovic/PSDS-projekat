@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity fifi is
+entity RAM is
 	port(
 		rst: in std_logic;
 		
@@ -17,7 +17,7 @@ entity fifi is
 	);
 end entity;
 
-architecture rtl of fifi is
+architecture rtl of RAM is
 
 type ram_type is array(1 downto 0) of std_logic_vector(9 downto 0);
 signal ram: ram_type:=(others=>(others=>'0')); -- zero-initialize for SRAM-based FPGAs

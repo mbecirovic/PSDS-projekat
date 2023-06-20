@@ -1,5 +1,5 @@
 Fitter report for upravitelj
-Tue Jun 20 14:10:05 2023
+Tue Jun 20 16:57:03 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -65,18 +65,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Jun 20 14:10:05 2023           ;
+; Fitter Status                      ; Successful - Tue Jun 20 16:57:03 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; upravitelj                                      ;
 ; Top-level Entity Name              ; upravitelj                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C70F896C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,507 / 68,416 ( 2 % )                          ;
-;     Total combinational functions  ; 1,501 / 68,416 ( 2 % )                          ;
-;     Dedicated logic registers      ; 356 / 68,416 ( < 1 % )                          ;
-; Total registers                    ; 356                                             ;
-; Total pins                         ; 36 / 622 ( 6 % )                                ;
+; Total logic elements               ; 1,525 / 68,416 ( 2 % )                          ;
+;     Total combinational functions  ; 1,518 / 68,416 ( 2 % )                          ;
+;     Dedicated logic registers      ; 354 / 68,416 ( < 1 % )                          ;
+; Total registers                    ; 354                                             ;
+; Total pins                         ; 35 / 622 ( 6 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 1,152,000 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 300 ( 0 % )                                 ;
@@ -368,7 +368,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location ;                ;              ; iKEY[0]        ; PIN_T29       ; QSF Assignment ;
 ; Location ;                ;              ; iKEY[1]        ; PIN_T28       ; QSF Assignment ;
 ; Location ;                ;              ; iKEY[2]        ; PIN_U30       ; QSF Assignment ;
-; Location ;                ;              ; iKEY[3]        ; PIN_U29       ; QSF Assignment ;
 ; Location ;                ;              ; iOTG_DREQ0     ; PIN_G12       ; QSF Assignment ;
 ; Location ;                ;              ; iOTG_DREQ1     ; PIN_F12       ; QSF Assignment ;
 ; Location ;                ;              ; iOTG_INT0      ; PIN_F13       ; QSF Assignment ;
@@ -411,6 +410,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location ;                ;              ; iTD2_VS        ; PIN_D15       ; QSF Assignment ;
 ; Location ;                ;              ; iUART_RTS      ; PIN_F23       ; QSF Assignment ;
 ; Location ;                ;              ; iUART_RXD      ; PIN_D21       ; QSF Assignment ;
+; Location ;                ;              ; key3           ; PIN_U29       ; QSF Assignment ;
 ; Location ;                ;              ; oAUD_DACDAT    ; PIN_F18       ; QSF Assignment ;
 ; Location ;                ;              ; oAUD_XCK       ; PIN_D17       ; QSF Assignment ;
 ; Location ;                ;              ; oDRAM0_A[0]    ; PIN_AA4       ; QSF Assignment ;
@@ -655,8 +655,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 1908 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 1908 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 1922 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 1922 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -679,7 +679,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 1905    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 1919    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -695,28 +695,28 @@ The pin-out file can be found in C:/Users/Merjem/Desktop/3. godina/PSDS/projekat
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 1,507 / 68,416 ( 2 % ) ;
-;     -- Combinational with no register       ; 1151                   ;
-;     -- Register only                        ; 6                      ;
-;     -- Combinational with a register        ; 350                    ;
+; Total logic elements                        ; 1,525 / 68,416 ( 2 % ) ;
+;     -- Combinational with no register       ; 1171                   ;
+;     -- Register only                        ; 7                      ;
+;     -- Combinational with a register        ; 347                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 491                    ;
+;     -- 4 input functions                    ; 493                    ;
 ;     -- 3 input functions                    ; 315                    ;
-;     -- <=2 input functions                  ; 695                    ;
-;     -- Register only                        ; 6                      ;
+;     -- <=2 input functions                  ; 710                    ;
+;     -- Register only                        ; 7                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 923                    ;
+;     -- normal mode                          ; 940                    ;
 ;     -- arithmetic mode                      ; 578                    ;
 ;                                             ;                        ;
-; Total registers*                            ; 356 / 70,234 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 356 / 68,416 ( < 1 % ) ;
+; Total registers*                            ; 354 / 70,234 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 354 / 68,416 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,818 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 126 / 4,276 ( 3 % )    ;
+; Total LABs:  partially or completely used   ; 115 / 4,276 ( 3 % )    ;
 ; Virtual pins                                ; 0                      ;
-; I/O pins                                    ; 36 / 622 ( 6 % )       ;
+; I/O pins                                    ; 35 / 622 ( 6 % )       ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )         ;
 ;                                             ;                        ;
 ; Global signals                              ; 11                     ;
@@ -730,11 +730,11 @@ The pin-out file can be found in C:/Users/Merjem/Desktop/3. godina/PSDS/projekat
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
-; Peak interconnect usage (total/H/V)         ; 10% / 9% / 12%         ;
-; Maximum fan-out                             ; 280                    ;
-; Highest non-global fan-out                  ; 81                     ;
-; Total fan-out                               ; 5383                   ;
-; Average fan-out                             ; 2.82                   ;
+; Peak interconnect usage (total/H/V)         ; 11% / 9% / 15%         ;
+; Maximum fan-out                             ; 279                    ;
+; Highest non-global fan-out                  ; 86                     ;
+; Total fan-out                               ; 5414                   ;
+; Average fan-out                             ; 2.81                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -747,28 +747,28 @@ The pin-out file can be found in C:/Users/Merjem/Desktop/3. godina/PSDS/projekat
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 1507 / 68416 ( 2 % )  ; 0 / 68416 ( 0 % )              ;
-;     -- Combinational with no register       ; 1151                  ; 0                              ;
-;     -- Register only                        ; 6                     ; 0                              ;
-;     -- Combinational with a register        ; 350                   ; 0                              ;
+; Total logic elements                        ; 1525 / 68416 ( 2 % )  ; 0 / 68416 ( 0 % )              ;
+;     -- Combinational with no register       ; 1171                  ; 0                              ;
+;     -- Register only                        ; 7                     ; 0                              ;
+;     -- Combinational with a register        ; 347                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 491                   ; 0                              ;
+;     -- 4 input functions                    ; 493                   ; 0                              ;
 ;     -- 3 input functions                    ; 315                   ; 0                              ;
-;     -- <=2 input functions                  ; 695                   ; 0                              ;
-;     -- Register only                        ; 6                     ; 0                              ;
+;     -- <=2 input functions                  ; 710                   ; 0                              ;
+;     -- Register only                        ; 7                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 923                   ; 0                              ;
+;     -- normal mode                          ; 940                   ; 0                              ;
 ;     -- arithmetic mode                      ; 578                   ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 356                   ; 0                              ;
-;     -- Dedicated logic registers            ; 356 / 68416 ( < 1 % ) ; 0 / 68416 ( 0 % )              ;
+; Total registers                             ; 354                   ; 0                              ;
+;     -- Dedicated logic registers            ; 354 / 68416 ( < 1 % ) ; 0 / 68416 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 126 / 4276 ( 3 % )    ; 0 / 4276 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 115 / 4276 ( 3 % )    ; 0 / 4276 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 36                    ; 0                              ;
+; I/O pins                                    ; 35                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 300 ( 0 % )       ; 0 / 300 ( 0 % )                ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
@@ -781,8 +781,8 @@ The pin-out file can be found in C:/Users/Merjem/Desktop/3. godina/PSDS/projekat
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 5383                  ; 0                              ;
-;     -- Registered Connections               ; 1054                  ; 0                              ;
+;     -- Total Connections                    ; 5414                  ; 0                              ;
+;     -- Registered Connections               ; 1056                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -790,7 +790,7 @@ The pin-out file can be found in C:/Users/Merjem/Desktop/3. godina/PSDS/projekat
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 7                     ; 0                              ;
-;     -- Output Ports                         ; 29                    ; 0                              ;
+;     -- Output Ports                         ; 28                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Registered Ports                            ;                       ;                                ;
@@ -814,13 +814,13 @@ The pin-out file can be found in C:/Users/Merjem/Desktop/3. godina/PSDS/projekat
 +-----------------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name                        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-----------------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; adresniVektorKompozicije[0] ; L7    ; 2        ; 0            ; 43           ; 4           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; adresniVektorKompozicije[1] ; L8    ; 2        ; 0            ; 43           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; clk                         ; AD15  ; 7        ; 49           ; 0            ; 1           ; 67                    ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; adresniVektorKompozicije[0] ; L7    ; 2        ; 0            ; 43           ; 4           ; 16                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; adresniVektorKompozicije[1] ; L8    ; 2        ; 0            ; 43           ; 3           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; clk                         ; AD15  ; 7        ; 49           ; 0            ; 1           ; 66                    ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; echo                        ; D28   ; 5        ; 95           ; 46           ; 1           ; 54                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; opcija[0]                   ; AA23  ; 6        ; 95           ; 8            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; opcija[1]                   ; AB26  ; 6        ; 95           ; 9            ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; rst                         ; R29   ; 5        ; 95           ; 26           ; 0           ; 34                    ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; rst                         ; R29   ; 5        ; 95           ; 26           ; 0           ; 33                    ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +-----------------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -845,7 +845,6 @@ The pin-out file can be found in C:/Users/Merjem/Desktop/3. godina/PSDS/projekat
 ; Hex4[6]                   ; M2    ; 2        ; 0            ; 33           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; adr_tona_ispis[0]         ; AJ6   ; 8        ; 13           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; adr_tona_ispis[1]         ; AK5   ; 8        ; 9            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; full_FIFO                 ; M24   ; 5        ; 95           ; 39           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; kompozicija_upis_check[0] ; AH3   ; 8        ; 3            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; kompozicija_upis_check[1] ; AD14  ; 8        ; 38           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; kompozicija_upis_check[2] ; AC13  ; 8        ; 33           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -870,7 +869,7 @@ The pin-out file can be found in C:/Users/Merjem/Desktop/3. godina/PSDS/projekat
 ; 2        ; 11 / 79 ( 14 % ) ; 3.3V          ; --           ;
 ; 3        ; 0 / 72 ( 0 % )   ; 3.3V          ; --           ;
 ; 4        ; 0 / 74 ( 0 % )   ; 3.3V          ; --           ;
-; 5        ; 5 / 85 ( 6 % )   ; 3.3V          ; --           ;
+; 5        ; 4 / 85 ( 5 % )   ; 3.3V          ; --           ;
 ; 6        ; 3 / 81 ( 4 % )   ; 3.3V          ; --           ;
 ; 7        ; 1 / 74 ( 1 % )   ; 3.3V          ; --           ;
 ; 8        ; 19 / 72 ( 26 % ) ; 3.3V          ; --           ;
@@ -1531,7 +1530,7 @@ The pin-out file can be found in C:/Users/Merjem/Desktop/3. godina/PSDS/projekat
 ; M21      ; 441        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M22      ; 442        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M23      ; 443        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M24      ; 448        ; 5        ; full_FIFO                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M24      ; 448        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M25      ; 447        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M26      ; 437        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M27      ; 438        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1824,17 +1823,18 @@ Note: User assignments will override these defaults. The user specified values a
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |upravitelj                              ; 1507 (252)  ; 356 (101)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 36   ; 0            ; 1151 (151)   ; 6 (6)             ; 350 (94)         ; |upravitelj                                                                                                              ; work         ;
-;    |buraz:za_buraza|                     ; 279 (179)   ; 159 (95)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 119 (83)     ; 0 (0)             ; 160 (96)         ; |upravitelj|buraz:za_buraza                                                                                              ; work         ;
-;       |buzzer:za_buzzer|                 ; 100 (100)   ; 64 (64)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 36 (36)      ; 0 (0)             ; 64 (64)          ; |upravitelj|buraz:za_buraza|buzzer:za_buzzer                                                                             ; work         ;
-;    |fifi:za_fifi|                        ; 32 (32)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 10 (10)          ; |upravitelj|fifi:za_fifi                                                                                                 ; work         ;
+; |upravitelj                              ; 1525 (254)  ; 354 (99)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 35   ; 0            ; 1171 (155)   ; 7 (5)             ; 347 (94)         ; |upravitelj                                                                                                              ; work         ;
+;    |RAM:za_RAM|                          ; 32 (32)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 10 (10)          ; |upravitelj|RAM:za_RAM                                                                                                   ; work         ;
+;    |player:za_playera|                   ; 279 (179)   ; 159 (95)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 120 (84)     ; 0 (0)             ; 159 (95)         ; |upravitelj|player:za_playera                                                                                            ; work         ;
+;       |buzzer:za_buzzer|                 ; 100 (100)   ; 64 (64)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 36 (36)      ; 0 (0)             ; 64 (64)          ; |upravitelj|player:za_playera|buzzer:za_buzzer                                                                           ; work         ;
 ;    |seg27:za_Hex0|                       ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |upravitelj|seg27:za_Hex0                                                                                                ; work         ;
-;    |sonic:za_sonica|                     ; 938 (147)   ; 86 (86)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 852 (61)     ; 0 (0)             ; 86 (39)          ; |upravitelj|sonic:za_sonica                                                                                              ; work         ;
-;       |lpm_divide:Div0|                  ; 838 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 791 (0)      ; 0 (0)             ; 47 (0)           ; |upravitelj|sonic:za_sonica|lpm_divide:Div0                                                                              ; work         ;
-;          |lpm_divide_mto:auto_generated| ; 838 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 791 (0)      ; 0 (0)             ; 47 (0)           ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated                                                ; work         ;
-;             |abs_divider_3dg:divider|    ; 838 (44)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 791 (22)     ; 0 (0)             ; 47 (22)          ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider                        ; work         ;
-;                |alt_u_div_i5f:divider|   ; 748 (748)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 745 (745)    ; 0 (0)             ; 3 (3)            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider  ; work         ;
-;                |lpm_abs_0s9:my_abs_num|  ; 46 (46)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 22 (22)          ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num ; work         ;
+;    |seg27:za_Hex4|                       ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |upravitelj|seg27:za_Hex4                                                                                                ; work         ;
+;    |sonic:za_sonica|                     ; 950 (148)   ; 86 (86)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 864 (62)     ; 2 (2)             ; 84 (38)          ; |upravitelj|sonic:za_sonica                                                                                              ; work         ;
+;       |lpm_divide:Div0|                  ; 848 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 802 (0)      ; 0 (0)             ; 46 (0)           ; |upravitelj|sonic:za_sonica|lpm_divide:Div0                                                                              ; work         ;
+;          |lpm_divide_mto:auto_generated| ; 848 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 802 (0)      ; 0 (0)             ; 46 (0)           ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated                                                ; work         ;
+;             |abs_divider_3dg:divider|    ; 848 (44)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 802 (22)     ; 0 (0)             ; 46 (22)          ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider                        ; work         ;
+;                |alt_u_div_i5f:divider|   ; 748 (748)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 744 (744)    ; 0 (0)             ; 4 (4)            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider  ; work         ;
+;                |lpm_abs_0s9:my_abs_num|  ; 56 (56)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 36 (36)      ; 0 (0)             ; 20 (20)          ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num ; work         ;
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1845,7 +1845,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                        ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +-----------------------------+----------+---------------+---------------+-----------------------+-----+
 ; trig                        ; Output   ; --            ; --            ; --                    ; --  ;
-; adresniVektorKompozicije[1] ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; sound                       ; Output   ; --            ; --            ; --                    ; --  ;
 ; Hex0[0]                     ; Output   ; --            ; --            ; --                    ; --  ;
 ; Hex0[1]                     ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1873,12 +1872,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Hex4[4]                     ; Output   ; --            ; --            ; --                    ; --  ;
 ; Hex4[5]                     ; Output   ; --            ; --            ; --                    ; --  ;
 ; Hex4[6]                     ; Output   ; --            ; --            ; --                    ; --  ;
-; full_FIFO                   ; Output   ; --            ; --            ; --                    ; --  ;
+; adresniVektorKompozicije[0] ; Input    ; (6) 2523 ps   ; (0) 171 ps    ; --                    ; --  ;
+; adresniVektorKompozicije[1] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; clk                         ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; opcija[1]                   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; opcija[0]                   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; rst                         ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; adresniVektorKompozicije[0] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; echo                        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +-----------------------------+----------+---------------+---------------+-----------------------+-----+
 
@@ -1888,7 +1887,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                             ; Pad To Core Index ; Setting ;
 +-------------------------------------------------+-------------------+---------+
+; adresniVektorKompozicije[0]                     ;                   ;         ;
+;      - seg27:za_Hex4|o~0                        ; 0                 ; 6       ;
+;      - seg27:za_Hex4|o~1                        ; 0                 ; 6       ;
+;      - seg27:za_Hex4|o~2                        ; 0                 ; 6       ;
+;      - RAM:za_RAM|rdata_o~0                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|rdata_o~1                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|rdata_o~2                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|rdata_o~3                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|rdata_o~4                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|rdata_o~5                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|rdata_o~6                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|rdata_o~7                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|rdata_o~8                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|rdata_o~9                     ; 1                 ; 0       ;
+;      - RAM:za_RAM|ram[1][0]~0                   ; 1                 ; 0       ;
+;      - RAM:za_RAM|ram[0][0]~1                   ; 1                 ; 0       ;
+;      - Hex4[4]                                  ; 0                 ; 6       ;
 ; adresniVektorKompozicije[1]                     ;                   ;         ;
+;      - seg27:za_Hex4|o~0                        ; 1                 ; 6       ;
+;      - seg27:za_Hex4|o~1                        ; 1                 ; 6       ;
+;      - seg27:za_Hex4|o~2                        ; 1                 ; 6       ;
+;      - Hex4[6]                                  ; 1                 ; 6       ;
 ; clk                                             ;                   ;         ;
 ; opcija[1]                                       ;                   ;         ;
 ;      - state_next.BRISANJE~0                    ; 1                 ; 6       ;
@@ -1899,17 +1919,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - state_next.BRISANJE~1                    ; 1                 ; 6       ;
 ;      - state_next.BRISANJE~2                    ; 1                 ; 6       ;
 ; rst                                             ;                   ;         ;
-; adresniVektorKompozicije[0]                     ;                   ;         ;
-;      - fifi:za_fifi|rdata_o~0                   ; 1                 ; 6       ;
-;      - fifi:za_fifi|rdata_o~1                   ; 1                 ; 6       ;
-;      - fifi:za_fifi|rdata_o~2                   ; 1                 ; 6       ;
-;      - fifi:za_fifi|rdata_o~3                   ; 1                 ; 6       ;
-;      - fifi:za_fifi|rdata_o~4                   ; 1                 ; 6       ;
-;      - fifi:za_fifi|rdata_o~5                   ; 1                 ; 6       ;
-;      - fifi:za_fifi|rdata_o~6                   ; 1                 ; 6       ;
-;      - fifi:za_fifi|rdata_o~7                   ; 1                 ; 6       ;
-;      - fifi:za_fifi|rdata_o~8                   ; 1                 ; 6       ;
-;      - fifi:za_fifi|rdata_o~9                   ; 1                 ; 6       ;
 ; echo                                            ;                   ;         ;
 ;      - sonic:za_sonica|distanca[16]             ; 1                 ; 6       ;
 ;      - sonic:za_sonica|distanca[15]             ; 1                 ; 6       ;
@@ -1968,53 +1977,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                      ;
-+--------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                       ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Equal10~0                                  ; LCCOMB_X40_Y15_N12 ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; Equal6~2                                   ; LCCOMB_X42_Y15_N22 ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; Equal7~0                                   ; LCCOMB_X42_Y15_N18 ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK13           ; --                        ;
-; Equal8~0                                   ; LCCOMB_X42_Y15_N14 ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; Equal9~0                                   ; LCCOMB_X42_Y15_N26 ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK15           ; --                        ;
-; buraz:za_buraza|buzzer:za_buzzer|Equal0~10 ; LCCOMB_X43_Y33_N16 ; 45      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; buraz:za_buraza|i_next~0                   ; LCCOMB_X43_Y31_N10 ; 31      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; buraz:za_buraza|play                       ; LCCOMB_X43_Y31_N22 ; 65      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; buraz:za_buraza|read_address~3             ; LCCOMB_X44_Y31_N0  ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; buraz:za_buraza|sekunde[2]~1               ; LCCOMB_X43_Y31_N14 ; 31      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; clk                                        ; PIN_AD15           ; 67      ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; clk                                        ; PIN_AD15           ; 280     ; Clock                     ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; counterUpisa[1]~0                          ; LCCOMB_X44_Y19_N20 ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; echo                                       ; PIN_D28            ; 54      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; fifi:za_fifi|ram[0][0]~1                   ; LCCOMB_X43_Y19_N24 ; 10      ; Latch enable              ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; fifi:za_fifi|ram[1][0]~0                   ; LCCOMB_X43_Y19_N4  ; 10      ; Latch enable              ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; i[11]~31                                   ; LCCOMB_X43_Y15_N4  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rst                                        ; PIN_R29            ; 34      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; rst                                        ; PIN_R29            ; 67      ; Async. clear              ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; sekunde[30]~30                             ; LCCOMB_X43_Y15_N8  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; state.SVIRANJE                             ; LCFF_X43_Y31_N11   ; 37      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; state.SVIRANJE                             ; LCFF_X43_Y31_N11   ; 73      ; Async. clear, Clock       ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-+--------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                        ;
++----------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                         ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; Equal10~0                                    ; LCCOMB_X50_Y17_N4  ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK15           ; --                        ;
+; Equal6~2                                     ; LCCOMB_X50_Y17_N8  ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; Equal7~0                                     ; LCCOMB_X50_Y17_N10 ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; Equal8~0                                     ; LCCOMB_X50_Y17_N16 ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; Equal9~0                                     ; LCCOMB_X50_Y17_N0  ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; RAM:za_RAM|ram[0][0]~1                       ; LCCOMB_X49_Y17_N0  ; 10      ; Latch enable              ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; RAM:za_RAM|ram[1][0]~0                       ; LCCOMB_X49_Y17_N16 ; 10      ; Latch enable              ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; clk                                          ; PIN_AD15           ; 66      ; Clock                     ; no     ; --                   ; --               ; --                        ;
+; clk                                          ; PIN_AD15           ; 279     ; Clock                     ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; echo                                         ; PIN_D28            ; 54      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; i[22]~31                                     ; LCCOMB_X51_Y15_N14 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; player:za_playera|buzzer:za_buzzer|Equal0~10 ; LCCOMB_X48_Y11_N26 ; 45      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; player:za_playera|i_next~0                   ; LCCOMB_X49_Y5_N0   ; 31      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; player:za_playera|play                       ; LCCOMB_X48_Y7_N2   ; 65      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; player:za_playera|read_address~3             ; LCCOMB_X48_Y4_N28  ; 2       ; Latch enable              ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; player:za_playera|sekunde[1]~1               ; LCCOMB_X48_Y7_N10  ; 31      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rst                                          ; PIN_R29            ; 33      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; rst                                          ; PIN_R29            ; 67      ; Async. clear              ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; sekunde[2]~30                                ; LCCOMB_X51_Y15_N2  ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; state.SVIRANJE                               ; LCFF_X48_Y4_N1     ; 37      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; state.SVIRANJE                               ; LCFF_X48_Y4_N1     ; 73      ; Async. clear, Clock       ; yes    ; Global Clock         ; GCLK12           ; --                        ;
++----------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                         ;
-+--------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; Name                           ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; Equal10~0                      ; LCCOMB_X40_Y15_N12 ; 2       ; Global Clock         ; GCLK3            ; --                        ;
-; Equal6~2                       ; LCCOMB_X42_Y15_N22 ; 2       ; Global Clock         ; GCLK12           ; --                        ;
-; Equal7~0                       ; LCCOMB_X42_Y15_N18 ; 2       ; Global Clock         ; GCLK13           ; --                        ;
-; Equal8~0                       ; LCCOMB_X42_Y15_N14 ; 2       ; Global Clock         ; GCLK9            ; --                        ;
-; Equal9~0                       ; LCCOMB_X42_Y15_N26 ; 2       ; Global Clock         ; GCLK15           ; --                        ;
-; buraz:za_buraza|read_address~3 ; LCCOMB_X44_Y31_N0  ; 2       ; Global Clock         ; GCLK11           ; --                        ;
-; clk                            ; PIN_AD15           ; 280     ; Global Clock         ; GCLK14           ; --                        ;
-; fifi:za_fifi|ram[0][0]~1       ; LCCOMB_X43_Y19_N24 ; 10      ; Global Clock         ; GCLK0            ; --                        ;
-; fifi:za_fifi|ram[1][0]~0       ; LCCOMB_X43_Y19_N4  ; 10      ; Global Clock         ; GCLK2            ; --                        ;
-; rst                            ; PIN_R29            ; 67      ; Global Clock         ; GCLK6            ; --                        ;
-; state.SVIRANJE                 ; LCFF_X43_Y31_N11   ; 73      ; Global Clock         ; GCLK10           ; --                        ;
-+--------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                           ;
++----------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
+; Name                             ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
+; Equal10~0                        ; LCCOMB_X50_Y17_N4  ; 2       ; Global Clock         ; GCLK15           ; --                        ;
+; Equal6~2                         ; LCCOMB_X50_Y17_N8  ; 2       ; Global Clock         ; GCLK0            ; --                        ;
+; Equal7~0                         ; LCCOMB_X50_Y17_N10 ; 2       ; Global Clock         ; GCLK8            ; --                        ;
+; Equal8~0                         ; LCCOMB_X50_Y17_N16 ; 2       ; Global Clock         ; GCLK10           ; --                        ;
+; Equal9~0                         ; LCCOMB_X50_Y17_N0  ; 2       ; Global Clock         ; GCLK9            ; --                        ;
+; RAM:za_RAM|ram[0][0]~1           ; LCCOMB_X49_Y17_N0  ; 10      ; Global Clock         ; GCLK3            ; --                        ;
+; RAM:za_RAM|ram[1][0]~0           ; LCCOMB_X49_Y17_N16 ; 10      ; Global Clock         ; GCLK11           ; --                        ;
+; clk                              ; PIN_AD15           ; 279     ; Global Clock         ; GCLK14           ; --                        ;
+; player:za_playera|read_address~3 ; LCCOMB_X48_Y4_N28  ; 2       ; Global Clock         ; GCLK13           ; --                        ;
+; rst                              ; PIN_R29            ; 67      ; Global Clock         ; GCLK6            ; --                        ;
+; state.SVIRANJE                   ; LCFF_X48_Y4_N1     ; 73      ; Global Clock         ; GCLK12           ; --                        ;
++----------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2022,11 +2030,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                                     ; Fan-Out ;
 +------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; sonic:za_sonica|duration_of_feedback[31]                                                                                                 ; 81      ;
-; clk                                                                                                                                      ; 66      ;
-; buraz:za_buraza|play                                                                                                                     ; 65      ;
+; sonic:za_sonica|duration_of_feedback[31]                                                                                                 ; 86      ;
+; clk                                                                                                                                      ; 65      ;
+; player:za_playera|play                                                                                                                   ; 65      ;
 ; echo                                                                                                                                     ; 54      ;
-; buraz:za_buraza|buzzer:za_buzzer|Equal0~10                                                                                               ; 45      ;
+; player:za_playera|buzzer:za_buzzer|Equal0~10                                                                                             ; 45      ;
 ; state.SVIRANJE                                                                                                                           ; 36      ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|add_sub_29_result_int[14]~24 ; 36      ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|add_sub_28_result_int[14]~24 ; 36      ;
@@ -2047,53 +2055,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|add_sub_13_result_int[14]~24 ; 36      ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|add_sub_12_result_int[13]~22 ; 36      ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|add_sub_11_result_int[12]~20 ; 34      ;
-; rst                                                                                                                                      ; 33      ;
 ; i_next~1                                                                                                                                 ; 33      ;
-; sekunde[30]~30                                                                                                                           ; 32      ;
-; i[11]~31                                                                                                                                 ; 32      ;
-; state.BRISANJE                                                                                                                           ; 31      ;
-; buraz:za_buraza|sekunde[2]~1                                                                                                             ; 31      ;
-; buraz:za_buraza|i_next~0                                                                                                                 ; 31      ;
+; rst                                                                                                                                      ; 32      ;
+; sekunde[2]~30                                                                                                                            ; 32      ;
+; i[22]~31                                                                                                                                 ; 32      ;
+; player:za_playera|sekunde[1]~1                                                                                                           ; 31      ;
+; player:za_playera|i_next~0                                                                                                               ; 31      ;
 ; sekunde_next~2                                                                                                                           ; 29      ;
-; buraz:za_buraza|sekunde[3]~2                                                                                                             ; 28      ;
+; player:za_playera|sekunde[3]~2                                                                                                           ; 28      ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|add_sub_30_result_int[14]~24 ; 26      ;
-; buraz:za_buraza|Equal0~10                                                                                                                ; 21      ;
+; state.SNIMANJE                                                                                                                           ; 25      ;
+; player:za_playera|Equal0~10                                                                                                              ; 21      ;
+; state.BRISANJE                                                                                                                           ; 20      ;
+; adresniVektorKompozicije[0]                                                                                                              ; 16      ;
 ; Equal4~9                                                                                                                                 ; 16      ;
 ; Equal4~4                                                                                                                                 ; 16      ;
 ; sekunde[2]                                                                                                                               ; 11      ;
 ; sekunde[3]                                                                                                                               ; 11      ;
-; adresniVektorKompozicije[0]                                                                                                              ; 10      ;
 ; sekunde[1]                                                                                                                               ; 9       ;
 ; i[2]                                                                                                                                     ; 9       ;
 ; i[1]                                                                                                                                     ; 9       ;
-; buraz:za_buraza|sekunde[31]                                                                                                              ; 9       ;
-; state.SNIMANJE                                                                                                                           ; 8       ;
+; player:za_playera|sekunde[31]                                                                                                            ; 9       ;
 ; sonic:za_sonica|Equal0~10                                                                                                                ; 8       ;
-; counterUpisa[0]                                                                                                                          ; 8       ;
 ; sekunde[31]                                                                                                                              ; 8       ;
 ; i[0]                                                                                                                                     ; 8       ;
 ; i[3]                                                                                                                                     ; 7       ;
 ; i_next~0                                                                                                                                 ; 6       ;
-; counterUpisa[1]                                                                                                                          ; 6       ;
 ; Equal6~1                                                                                                                                 ; 6       ;
 ; sekunde[0]                                                                                                                               ; 6       ;
+; sonic:za_sonica|duration_of_feedback[15]                                                                                                 ; 6       ;
+; sonic:za_sonica|duration_of_feedback[5]                                                                                                  ; 6       ;
 ; sonic:za_sonica|duration_of_feedback[3]                                                                                                  ; 6       ;
-; a_ton2[1]                                                                                                                                ; 5       ;
-; a_ton3[1]                                                                                                                                ; 5       ;
-; a_ton4[1]                                                                                                                                ; 5       ;
-; a_ton5[1]                                                                                                                                ; 5       ;
-; a_ton1[1]                                                                                                                                ; 5       ;
-; a_ton2[0]                                                                                                                                ; 5       ;
-; a_ton3[0]                                                                                                                                ; 5       ;
-; a_ton4[0]                                                                                                                                ; 5       ;
-; a_ton5[0]                                                                                                                                ; 5       ;
-; a_ton1[0]                                                                                                                                ; 5       ;
-; buraz:za_buraza|LessThan2~3                                                                                                              ; 5       ;
+; sonic:za_sonica|duration_of_feedback[13]                                                                                                 ; 6       ;
+; player:za_playera|LessThan2~3                                                                                                            ; 5       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[27]~39                 ; 5       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[24]~38                 ; 5       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[21]~37                 ; 5       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[18]~36                 ; 5       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[2]~28                  ; 5       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[12]~33                 ; 5       ;
 ; sonic:za_sonica|adresa_tona[1]~2                                                                                                         ; 5       ;
 ; sekunde_next~1                                                                                                                           ; 5       ;
 ; sonic:za_sonica|adresa_tona[0]~1                                                                                                         ; 5       ;
@@ -2101,48 +2100,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|duration_of_feedback[25]                                                                                                 ; 5       ;
 ; sonic:za_sonica|duration_of_feedback[22]                                                                                                 ; 5       ;
 ; sonic:za_sonica|duration_of_feedback[19]                                                                                                 ; 5       ;
-; sonic:za_sonica|duration_of_feedback[17]                                                                                                 ; 5       ;
-; sonic:za_sonica|duration_of_feedback[15]                                                                                                 ; 5       ;
-; sonic:za_sonica|duration_of_feedback[13]                                                                                                 ; 5       ;
 ; sonic:za_sonica|duration_of_feedback[11]                                                                                                 ; 5       ;
 ; sonic:za_sonica|duration_of_feedback[9]                                                                                                  ; 5       ;
-; sonic:za_sonica|duration_of_feedback[7]                                                                                                  ; 5       ;
-; sonic:za_sonica|duration_of_feedback[4]                                                                                                  ; 5       ;
-; sonic:za_sonica|duration_of_feedback[5]                                                                                                  ; 5       ;
-; buraz:za_buraza|i[2]                                                                                                                     ; 5       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[20]~61                 ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[4]~55                  ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[6]~54                  ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[8]~52                  ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[10]~51                 ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[12]~50                 ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[14]~49                 ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[16]~48                 ; 4       ;
+; player:za_playera|i[2]                                                                                                                   ; 5       ;
+; adresniVektorKompozicije[1]                                                                                                              ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[20]~67                 ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[4]~60                  ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[6]~59                  ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[4]~57                  ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[2]~56                  ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[8]~55                  ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[10]~54                 ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[12]~52                 ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[14]~51                 ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[16]~50                 ; 4       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[14]~48                 ; 4       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[18]~47                 ; 4       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[21]~46                 ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[16]~35                 ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[14]~34                 ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[12]~33                 ; 4       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[10]~32                 ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[8]~31                  ; 4       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[6]~30                  ; 4       ;
-; buraz:za_buraza|i[1]                                                                                                                     ; 4       ;
+; player:za_playera|i[1]                                                                                                                   ; 4       ;
 ; Equal6~0                                                                                                                                 ; 4       ;
-; buraz:za_buraza|Equal1~8                                                                                                                 ; 4       ;
-; buraz:za_buraza|sekunde[0]                                                                                                               ; 4       ;
-; buraz:za_buraza|sekunde[1]                                                                                                               ; 4       ;
-; buraz:za_buraza|sekunde[2]                                                                                                               ; 4       ;
-; buraz:za_buraza|i[31]                                                                                                                    ; 4       ;
+; player:za_playera|Equal1~8                                                                                                               ; 4       ;
+; player:za_playera|sekunde[0]                                                                                                             ; 4       ;
+; player:za_playera|sekunde[1]                                                                                                             ; 4       ;
+; player:za_playera|sekunde[2]                                                                                                             ; 4       ;
+; sonic:za_sonica|duration_of_feedback[17]                                                                                                 ; 4       ;
+; sonic:za_sonica|duration_of_feedback[16]                                                                                                 ; 4       ;
+; sonic:za_sonica|duration_of_feedback[14]                                                                                                 ; 4       ;
+; sonic:za_sonica|duration_of_feedback[7]                                                                                                  ; 4       ;
+; sonic:za_sonica|duration_of_feedback[6]                                                                                                  ; 4       ;
+; sonic:za_sonica|duration_of_feedback[4]                                                                                                  ; 4       ;
+; sonic:za_sonica|duration_of_feedback[0]                                                                                                  ; 4       ;
+; sonic:za_sonica|duration_of_feedback[1]                                                                                                  ; 4       ;
+; sonic:za_sonica|duration_of_feedback[2]                                                                                                  ; 4       ;
+; player:za_playera|i[31]                                                                                                                  ; 4       ;
 ; opcija[0]                                                                                                                                ; 3       ;
 ; opcija[1]                                                                                                                                ; 3       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[23]~60                 ; 3       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[26]~59                 ; 3       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[4]~53                  ; 3       ;
+; a_ton2[1]                                                                                                                                ; 3       ;
+; a_ton3[1]                                                                                                                                ; 3       ;
+; a_ton4[1]                                                                                                                                ; 3       ;
+; a_ton5[1]                                                                                                                                ; 3       ;
+; a_ton1[1]                                                                                                                                ; 3       ;
+; a_ton2[0]                                                                                                                                ; 3       ;
+; a_ton3[0]                                                                                                                                ; 3       ;
+; a_ton4[0]                                                                                                                                ; 3       ;
+; a_ton5[0]                                                                                                                                ; 3       ;
+; a_ton1[0]                                                                                                                                ; 3       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[23]~66                 ; 3       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[26]~65                 ; 3       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[8]~53                  ; 3       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[24]~45                 ; 3       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[27]~44                 ; 3       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[29]~42                 ; 3       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[30]~41                 ; 3       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[30]~40                 ; 3       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~1                         ; 3       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~0                         ; 3       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[5]~31                  ; 3       ;
 ; sonic:za_sonica|LessThan2~6                                                                                                              ; 3       ;
 ; sonic:za_sonica|distanca[31]                                                                                                             ; 3       ;
 ; sonic:za_sonica|distanca[2]                                                                                                              ; 3       ;
@@ -2176,6 +2190,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; i[29]                                                                                                                                    ; 3       ;
 ; i[30]                                                                                                                                    ; 3       ;
 ; i[31]                                                                                                                                    ; 3       ;
+; wdata_i[9]~9                                                                                                                             ; 3       ;
+; wdata_i[8]~8                                                                                                                             ; 3       ;
+; wdata_i[7]~7                                                                                                                             ; 3       ;
+; wdata_i[6]~6                                                                                                                             ; 3       ;
+; wdata_i[5]~5                                                                                                                             ; 3       ;
+; wdata_i[4]~4                                                                                                                             ; 3       ;
+; wdata_i[3]~3                                                                                                                             ; 3       ;
+; wdata_i[2]~2                                                                                                                             ; 3       ;
+; wdata_i[1]~1                                                                                                                             ; 3       ;
+; wdata_i[0]~0                                                                                                                             ; 3       ;
 ; sekunde[4]                                                                                                                               ; 3       ;
 ; sekunde[5]                                                                                                                               ; 3       ;
 ; sekunde[6]                                                                                                                               ; 3       ;
@@ -2203,35 +2227,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sekunde[28]                                                                                                                              ; 3       ;
 ; sekunde[29]                                                                                                                              ; 3       ;
 ; sekunde[30]                                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[3]                                                                                                               ; 3       ;
-; buraz:za_buraza|sekunde[4]                                                                                                               ; 3       ;
-; buraz:za_buraza|sekunde[5]                                                                                                               ; 3       ;
-; buraz:za_buraza|sekunde[6]                                                                                                               ; 3       ;
-; buraz:za_buraza|sekunde[7]                                                                                                               ; 3       ;
-; buraz:za_buraza|sekunde[8]                                                                                                               ; 3       ;
-; buraz:za_buraza|sekunde[9]                                                                                                               ; 3       ;
-; buraz:za_buraza|sekunde[10]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[11]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[12]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[13]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[14]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[15]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[16]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[17]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[18]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[19]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[20]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[21]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[22]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[23]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[24]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[25]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[26]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[27]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[28]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[29]                                                                                                              ; 3       ;
-; buraz:za_buraza|sekunde[30]                                                                                                              ; 3       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[0]                                                                                              ; 3       ;
+; player:za_playera|sekunde[3]                                                                                                             ; 3       ;
+; player:za_playera|sekunde[4]                                                                                                             ; 3       ;
+; player:za_playera|sekunde[5]                                                                                                             ; 3       ;
+; player:za_playera|sekunde[6]                                                                                                             ; 3       ;
+; player:za_playera|sekunde[7]                                                                                                             ; 3       ;
+; player:za_playera|sekunde[8]                                                                                                             ; 3       ;
+; player:za_playera|sekunde[9]                                                                                                             ; 3       ;
+; player:za_playera|sekunde[10]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[11]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[12]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[13]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[14]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[15]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[16]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[17]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[18]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[19]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[20]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[21]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[22]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[23]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[24]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[25]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[26]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[27]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[28]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[29]                                                                                                            ; 3       ;
+; player:za_playera|sekunde[30]                                                                                                            ; 3       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[0]                                                                                            ; 3       ;
 ; sonic:za_sonica|counter50[21]                                                                                                            ; 3       ;
 ; sonic:za_sonica|counter50[20]                                                                                                            ; 3       ;
 ; sonic:za_sonica|counter50[19]                                                                                                            ; 3       ;
@@ -2250,39 +2274,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|duration_of_feedback[26]                                                                                                 ; 3       ;
 ; sonic:za_sonica|duration_of_feedback[23]                                                                                                 ; 3       ;
 ; sonic:za_sonica|duration_of_feedback[20]                                                                                                 ; 3       ;
-; sonic:za_sonica|duration_of_feedback[18]                                                                                                 ; 3       ;
-; sonic:za_sonica|duration_of_feedback[16]                                                                                                 ; 3       ;
-; sonic:za_sonica|duration_of_feedback[14]                                                                                                 ; 3       ;
 ; sonic:za_sonica|duration_of_feedback[12]                                                                                                 ; 3       ;
-; sonic:za_sonica|duration_of_feedback[10]                                                                                                 ; 3       ;
 ; sonic:za_sonica|duration_of_feedback[8]                                                                                                  ; 3       ;
-; sonic:za_sonica|duration_of_feedback[6]                                                                                                  ; 3       ;
-; sonic:za_sonica|duration_of_feedback[0]                                                                                                  ; 3       ;
-; sonic:za_sonica|duration_of_feedback[1]                                                                                                  ; 3       ;
-; sonic:za_sonica|duration_of_feedback[2]                                                                                                  ; 3       ;
-; buraz:za_buraza|i[3]                                                                                                                     ; 3       ;
-; fifi:za_fifi|ram[0][8]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][8]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[0][6]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][6]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[0][0]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][0]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[0][2]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][2]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[0][4]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][4]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[0][9]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][9]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[0][7]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][7]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[0][1]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][1]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[0][3]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][3]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[0][5]                                                                                                                   ; 2       ;
-; fifi:za_fifi|ram[1][5]                                                                                                                   ; 2       ;
-; buraz:za_buraza|read_address[0]                                                                                                          ; 2       ;
-; buraz:za_buraza|read_address[1]                                                                                                          ; 2       ;
+; sonic:za_sonica|duration_of_feedback[10]                                                                                                 ; 3       ;
+; player:za_playera|i[3]                                                                                                                   ; 3       ;
+; RAM:za_RAM|ram[0][8]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][8]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[0][6]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][6]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[0][0]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][0]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[0][2]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][2]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[0][4]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][4]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[0][9]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][9]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[0][7]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][7]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[0][1]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][1]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[0][3]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][3]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[0][5]                                                                                                                     ; 2       ;
+; RAM:za_RAM|ram[1][5]                                                                                                                     ; 2       ;
+; player:za_playera|read_address[0]                                                                                                        ; 2       ;
+; player:za_playera|read_address[1]                                                                                                        ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[395]~1004           ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[367]~1003           ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[339]~1002           ; 2       ;
@@ -2452,7 +2469,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[162]~802            ; 2       ;
 ; adr_tona_ispis~12                                                                                                                        ; 2       ;
 ; adr_tona_ispis~11                                                                                                                        ; 2       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[2]~56                  ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[2]~61                  ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[407]~787            ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[407]~786            ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[394]~771            ; 2       ;
@@ -2461,6 +2478,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[366]~744            ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[351]~733            ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[351]~732            ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[6]~58                  ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[338]~717            ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[323]~706            ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[323]~705            ; 2       ;
@@ -2476,7 +2494,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[226]~609            ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[211]~598            ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[211]~597            ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[16]~49                 ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[198]~582            ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~17                        ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~16                        ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~15                        ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~14                        ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~13                        ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~12                        ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~11                        ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~10                        ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~9                         ; 2       ;
@@ -2486,10 +2511,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~5                         ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~4                         ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~3                         ; 2       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[15]~35                 ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~2                         ; 2       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~1                         ; 2       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|_~0                         ; 2       ;
-; counterUpisa[1]~0                                                                                                                        ; 2       ;
 ; Equal6~2                                                                                                                                 ; 2       ;
 ; sonic:za_sonica|LessThan4~0                                                                                                              ; 2       ;
 ; sonic:za_sonica|LessThan2~0                                                                                                              ; 2       ;
@@ -2526,81 +2549,81 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; counter50[29]                                                                                                                            ; 2       ;
 ; counter50[30]                                                                                                                            ; 2       ;
 ; counter50[31]                                                                                                                            ; 2       ;
-; buraz:za_buraza|sekunde[2]~0                                                                                                             ; 2       ;
-; buraz:za_buraza|Equal1~9                                                                                                                 ; 2       ;
-; buraz:za_buraza|counter50[0]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[1]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[2]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[3]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[4]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[5]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[6]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[7]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[8]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[9]                                                                                                             ; 2       ;
-; buraz:za_buraza|counter50[10]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[11]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[12]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[13]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[14]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[15]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[16]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[18]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[17]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[19]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[20]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[21]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[22]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[23]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[24]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[26]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[27]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[25]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[28]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[29]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[30]                                                                                                            ; 2       ;
-; buraz:za_buraza|counter50[31]                                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[0]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[1]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[2]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[3]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[4]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[5]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[6]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[7]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[8]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[9]                                                                                            ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[10]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[11]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[12]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[13]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[14]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[15]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[16]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[18]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[17]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[19]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[20]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[21]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[22]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[23]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[24]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[26]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[27]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[25]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[28]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[29]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[30]                                                                                           ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|counter50[31]                                                                                           ; 2       ;
+; player:za_playera|sekunde[1]~0                                                                                                           ; 2       ;
+; player:za_playera|Equal1~9                                                                                                               ; 2       ;
+; player:za_playera|counter50[0]                                                                                                           ; 2       ;
+; player:za_playera|counter50[1]                                                                                                           ; 2       ;
+; player:za_playera|counter50[2]                                                                                                           ; 2       ;
+; player:za_playera|counter50[3]                                                                                                           ; 2       ;
+; player:za_playera|counter50[4]                                                                                                           ; 2       ;
+; player:za_playera|counter50[5]                                                                                                           ; 2       ;
+; player:za_playera|counter50[6]                                                                                                           ; 2       ;
+; player:za_playera|counter50[7]                                                                                                           ; 2       ;
+; player:za_playera|counter50[8]                                                                                                           ; 2       ;
+; player:za_playera|counter50[9]                                                                                                           ; 2       ;
+; player:za_playera|counter50[10]                                                                                                          ; 2       ;
+; player:za_playera|counter50[11]                                                                                                          ; 2       ;
+; player:za_playera|counter50[12]                                                                                                          ; 2       ;
+; player:za_playera|counter50[13]                                                                                                          ; 2       ;
+; player:za_playera|counter50[14]                                                                                                          ; 2       ;
+; player:za_playera|counter50[15]                                                                                                          ; 2       ;
+; player:za_playera|counter50[16]                                                                                                          ; 2       ;
+; player:za_playera|counter50[18]                                                                                                          ; 2       ;
+; player:za_playera|counter50[17]                                                                                                          ; 2       ;
+; player:za_playera|counter50[19]                                                                                                          ; 2       ;
+; player:za_playera|counter50[20]                                                                                                          ; 2       ;
+; player:za_playera|counter50[21]                                                                                                          ; 2       ;
+; player:za_playera|counter50[22]                                                                                                          ; 2       ;
+; player:za_playera|counter50[23]                                                                                                          ; 2       ;
+; player:za_playera|counter50[24]                                                                                                          ; 2       ;
+; player:za_playera|counter50[26]                                                                                                          ; 2       ;
+; player:za_playera|counter50[27]                                                                                                          ; 2       ;
+; player:za_playera|counter50[25]                                                                                                          ; 2       ;
+; player:za_playera|counter50[28]                                                                                                          ; 2       ;
+; player:za_playera|counter50[29]                                                                                                          ; 2       ;
+; player:za_playera|counter50[30]                                                                                                          ; 2       ;
+; player:za_playera|counter50[31]                                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[0]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[1]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[2]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[3]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[4]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[5]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[6]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[7]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[8]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[9]                                                                                          ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[10]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[11]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[12]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[13]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[14]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[15]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[16]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[18]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[17]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[19]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[20]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[21]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[22]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[23]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[24]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[26]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[27]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[25]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[28]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[29]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[30]                                                                                         ; 2       ;
+; player:za_playera|buzzer:za_buzzer|counter50[31]                                                                                         ; 2       ;
 ; sonic:za_sonica|counter50[0]                                                                                                             ; 2       ;
 ; sonic:za_sonica|counter50[1]                                                                                                             ; 2       ;
-; LessThan2~0                                                                                                                              ; 2       ;
+; seg27:za_Hex4|o~0                                                                                                                        ; 2       ;
 ; Equal10~0                                                                                                                                ; 2       ;
 ; adr_tona_ispis~4                                                                                                                         ; 2       ;
 ; Equal5~7                                                                                                                                 ; 2       ;
 ; Equal5~5                                                                                                                                 ; 2       ;
 ; Equal5~4                                                                                                                                 ; 2       ;
-; buraz:za_buraza|LessThan2~2                                                                                                              ; 2       ;
+; player:za_playera|LessThan2~2                                                                                                            ; 2       ;
 ; sonic:za_sonica|Equal0~4                                                                                                                 ; 2       ;
 ; sonic:za_sonica|counter50[30]                                                                                                            ; 2       ;
 ; sonic:za_sonica|counter50[29]                                                                                                            ; 2       ;
@@ -2812,37 +2835,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|duration_of_feedback[27]                                                                                                 ; 2       ;
 ; sonic:za_sonica|duration_of_feedback[24]                                                                                                 ; 2       ;
 ; sonic:za_sonica|duration_of_feedback[21]                                                                                                 ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[30]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[29]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[28]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[27]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[26]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[25]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[24]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[23]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[22]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[21]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[20]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[19]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[18]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[17]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[16]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[15]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[14]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[13]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[12]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[11]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[10]                                                                                             ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[9]                                                                                              ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[8]                                                                                              ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[7]                                                                                              ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[6]                                                                                              ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[5]                                                                                              ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[4]                                                                                              ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[3]                                                                                              ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[2]                                                                                              ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[1]                                                                                              ; 2       ;
-; buraz:za_buraza|buzzer:za_buzzer|sekunde[31]                                                                                             ; 2       ;
+; sonic:za_sonica|duration_of_feedback[18]                                                                                                 ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[30]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[29]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[28]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[27]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[26]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[25]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[24]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[23]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[22]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[21]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[20]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[19]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[18]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[17]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[16]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[15]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[14]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[13]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[12]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[11]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[10]                                                                                           ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[9]                                                                                            ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[8]                                                                                            ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[7]                                                                                            ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[6]                                                                                            ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[5]                                                                                            ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[4]                                                                                            ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[3]                                                                                            ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[2]                                                                                            ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[1]                                                                                            ; 2       ;
+; player:za_playera|buzzer:za_buzzer|sekunde[31]                                                                                           ; 2       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[423]~1005           ; 1       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[408]~996            ; 1       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[380]~995            ; 1       ;
@@ -2880,8 +2904,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[222]~828            ; 1       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[208]~819            ; 1       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[194]~808            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[22]~58                 ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[25]~57                 ; 1       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[22]~64                 ; 1       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[25]~63                 ; 1       ;
+; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num|cs2a[10]~62                 ; 1       ;
 ; counter50_next[20]~22                                                                                                                    ; 1       ;
 ; counter50_next[21]~21                                                                                                                    ; 1       ;
 ; counter50_next[22]~20                                                                                                                    ; 1       ;
@@ -3005,23 +3030,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[330]~698            ; 1       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[331]~697            ; 1       ;
 ; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[332]~696            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[333]~695            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[334]~694            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[309]~693            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[309]~692            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[310]~691            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[311]~689            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[312]~688            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[313]~687            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[314]~686            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[315]~685            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[316]~684            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[317]~683            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[318]~682            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[319]~681            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[320]~680            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[296]~677            ; 1       ;
-; sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider|StageOut[297]~676            ; 1       ;
 +------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -3030,167 +3038,166 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+---------------------------+
 ; Other Routing Resource Type ; Usage                     ;
 +-----------------------------+---------------------------+
-; Block interconnects         ; 2,233 / 197,592 ( 1 % )   ;
-; C16 interconnects           ; 42 / 6,270 ( < 1 % )      ;
-; C4 interconnects            ; 1,018 / 123,120 ( < 1 % ) ;
-; Direct links                ; 584 / 197,592 ( < 1 % )   ;
+; Block interconnects         ; 2,211 / 197,592 ( 1 % )   ;
+; C16 interconnects           ; 37 / 6,270 ( < 1 % )      ;
+; C4 interconnects            ; 1,125 / 123,120 ( < 1 % ) ;
+; Direct links                ; 604 / 197,592 ( < 1 % )   ;
 ; Global clocks               ; 11 / 16 ( 69 % )          ;
-; Local interconnects         ; 610 / 68,416 ( < 1 % )    ;
-; R24 interconnects           ; 43 / 5,926 ( < 1 % )      ;
-; R4 interconnects            ; 1,119 / 167,484 ( < 1 % ) ;
+; Local interconnects         ; 622 / 68,416 ( < 1 % )    ;
+; R24 interconnects           ; 44 / 5,926 ( < 1 % )      ;
+; R4 interconnects            ; 985 / 167,484 ( < 1 % )   ;
 +-----------------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 11.96) ; Number of LABs  (Total = 126) ;
+; Number of Logic Elements  (Average = 13.26) ; Number of LABs  (Total = 115) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 5                             ;
-; 2                                           ; 4                             ;
-; 3                                           ; 6                             ;
-; 4                                           ; 6                             ;
-; 5                                           ; 5                             ;
+; 1                                           ; 2                             ;
+; 2                                           ; 3                             ;
+; 3                                           ; 2                             ;
+; 4                                           ; 1                             ;
+; 5                                           ; 2                             ;
 ; 6                                           ; 4                             ;
-; 7                                           ; 2                             ;
-; 8                                           ; 6                             ;
+; 7                                           ; 4                             ;
+; 8                                           ; 1                             ;
 ; 9                                           ; 2                             ;
-; 10                                          ; 2                             ;
-; 11                                          ; 1                             ;
+; 10                                          ; 5                             ;
+; 11                                          ; 2                             ;
 ; 12                                          ; 5                             ;
-; 13                                          ; 2                             ;
+; 13                                          ; 6                             ;
 ; 14                                          ; 2                             ;
-; 15                                          ; 6                             ;
-; 16                                          ; 68                            ;
+; 15                                          ; 3                             ;
+; 16                                          ; 71                            ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 0.80) ; Number of LABs  (Total = 126) ;
+; LAB-wide Signals  (Average = 0.79) ; Number of LABs  (Total = 115) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 24                            ;
-; 1 Clock                            ; 45                            ;
-; 1 Clock enable                     ; 22                            ;
+; 1 Async. clear                     ; 23                            ;
+; 1 Clock                            ; 43                            ;
+; 1 Clock enable                     ; 16                            ;
 ; 1 Sync. clear                      ; 4                             ;
 ; 2 Async. clears                    ; 1                             ;
-; 2 Clocks                           ; 5                             ;
+; 2 Clocks                           ; 4                             ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 14.52) ; Number of LABs  (Total = 126) ;
+; Number of Signals Sourced  (Average = 16.03) ; Number of LABs  (Total = 115) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 3                             ;
-; 2                                            ; 5                             ;
-; 3                                            ; 6                             ;
-; 4                                            ; 6                             ;
-; 5                                            ; 6                             ;
+; 1                                            ; 2                             ;
+; 2                                            ; 2                             ;
+; 3                                            ; 3                             ;
+; 4                                            ; 1                             ;
+; 5                                            ; 2                             ;
 ; 6                                            ; 3                             ;
-; 7                                            ; 3                             ;
-; 8                                            ; 4                             ;
+; 7                                            ; 4                             ;
+; 8                                            ; 1                             ;
 ; 9                                            ; 1                             ;
-; 10                                           ; 2                             ;
-; 11                                           ; 1                             ;
-; 12                                           ; 3                             ;
-; 13                                           ; 1                             ;
-; 14                                           ; 2                             ;
-; 15                                           ; 22                            ;
-; 16                                           ; 23                            ;
-; 17                                           ; 1                             ;
-; 18                                           ; 2                             ;
-; 19                                           ; 2                             ;
-; 20                                           ; 0                             ;
-; 21                                           ; 4                             ;
-; 22                                           ; 3                             ;
-; 23                                           ; 3                             ;
-; 24                                           ; 2                             ;
-; 25                                           ; 3                             ;
+; 10                                           ; 4                             ;
+; 11                                           ; 2                             ;
+; 12                                           ; 2                             ;
+; 13                                           ; 5                             ;
+; 14                                           ; 0                             ;
+; 15                                           ; 19                            ;
+; 16                                           ; 25                            ;
+; 17                                           ; 0                             ;
+; 18                                           ; 5                             ;
+; 19                                           ; 6                             ;
+; 20                                           ; 3                             ;
+; 21                                           ; 3                             ;
+; 22                                           ; 2                             ;
+; 23                                           ; 0                             ;
+; 24                                           ; 1                             ;
+; 25                                           ; 4                             ;
 ; 26                                           ; 4                             ;
-; 27                                           ; 3                             ;
-; 28                                           ; 2                             ;
-; 29                                           ; 1                             ;
-; 30                                           ; 2                             ;
-; 31                                           ; 0                             ;
-; 32                                           ; 3                             ;
+; 27                                           ; 5                             ;
+; 28                                           ; 0                             ;
+; 29                                           ; 3                             ;
+; 30                                           ; 0                             ;
+; 31                                           ; 1                             ;
+; 32                                           ; 2                             ;
 +----------------------------------------------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                          ;
 +--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 10.46) ; Number of LABs  (Total = 126) ;
+; Number of Signals Sourced Out  (Average = 11.50) ; Number of LABs  (Total = 115) ;
 +--------------------------------------------------+-------------------------------+
 ; 0                                                ; 0                             ;
-; 1                                                ; 11                            ;
-; 2                                                ; 4                             ;
-; 3                                                ; 7                             ;
-; 4                                                ; 5                             ;
-; 5                                                ; 8                             ;
-; 6                                                ; 3                             ;
-; 7                                                ; 3                             ;
-; 8                                                ; 5                             ;
+; 1                                                ; 6                             ;
+; 2                                                ; 3                             ;
+; 3                                                ; 6                             ;
+; 4                                                ; 1                             ;
+; 5                                                ; 3                             ;
+; 6                                                ; 5                             ;
+; 7                                                ; 5                             ;
+; 8                                                ; 3                             ;
 ; 9                                                ; 2                             ;
-; 10                                               ; 4                             ;
+; 10                                               ; 5                             ;
 ; 11                                               ; 3                             ;
-; 12                                               ; 16                            ;
-; 13                                               ; 9                             ;
-; 14                                               ; 4                             ;
-; 15                                               ; 6                             ;
-; 16                                               ; 34                            ;
+; 12                                               ; 7                             ;
+; 13                                               ; 22                            ;
+; 14                                               ; 2                             ;
+; 15                                               ; 2                             ;
+; 16                                               ; 38                            ;
 ; 17                                               ; 0                             ;
 ; 18                                               ; 0                             ;
 ; 19                                               ; 0                             ;
 ; 20                                               ; 0                             ;
 ; 21                                               ; 0                             ;
-; 22                                               ; 0                             ;
-; 23                                               ; 1                             ;
+; 22                                               ; 1                             ;
+; 23                                               ; 0                             ;
 ; 24                                               ; 0                             ;
-; 25                                               ; 0                             ;
-; 26                                               ; 1                             ;
+; 25                                               ; 1                             ;
 +--------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 16.40) ; Number of LABs  (Total = 126) ;
+; Number of Distinct Inputs  (Average = 17.63) ; Number of LABs  (Total = 115) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
-; 2                                            ; 3                             ;
-; 3                                            ; 2                             ;
-; 4                                            ; 4                             ;
-; 5                                            ; 9                             ;
-; 6                                            ; 5                             ;
+; 2                                            ; 2                             ;
+; 3                                            ; 0                             ;
+; 4                                            ; 6                             ;
+; 5                                            ; 2                             ;
+; 6                                            ; 0                             ;
 ; 7                                            ; 3                             ;
-; 8                                            ; 5                             ;
+; 8                                            ; 3                             ;
 ; 9                                            ; 3                             ;
-; 10                                           ; 5                             ;
+; 10                                           ; 6                             ;
 ; 11                                           ; 3                             ;
 ; 12                                           ; 3                             ;
-; 13                                           ; 4                             ;
-; 14                                           ; 2                             ;
-; 15                                           ; 6                             ;
-; 16                                           ; 6                             ;
+; 13                                           ; 3                             ;
+; 14                                           ; 5                             ;
+; 15                                           ; 3                             ;
+; 16                                           ; 7                             ;
 ; 17                                           ; 6                             ;
-; 18                                           ; 3                             ;
-; 19                                           ; 3                             ;
+; 18                                           ; 1                             ;
+; 19                                           ; 10                            ;
 ; 20                                           ; 3                             ;
 ; 21                                           ; 4                             ;
-; 22                                           ; 3                             ;
-; 23                                           ; 4                             ;
-; 24                                           ; 5                             ;
-; 25                                           ; 10                            ;
+; 22                                           ; 4                             ;
+; 23                                           ; 5                             ;
+; 24                                           ; 7                             ;
+; 25                                           ; 6                             ;
 ; 26                                           ; 2                             ;
-; 27                                           ; 12                            ;
-; 28                                           ; 4                             ;
-; 29                                           ; 2                             ;
-; 30                                           ; 2                             ;
+; 27                                           ; 11                            ;
+; 28                                           ; 5                             ;
+; 29                                           ; 1                             ;
+; 30                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -3228,86 +3235,88 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clk             ; clk,state.SVIRANJE   ; 13.6              ;
-; clk             ; state.SVIRANJE       ; 4.8               ;
-; clk             ; sekunde[0]           ; 3.5               ;
+; clk             ; clk,state.SVIRANJE   ; 27.5              ;
+; clk             ; state.SVIRANJE       ; 6.2               ;
+; clk             ; sekunde[0]           ; 2.6               ;
+; clk             ; sekunde[0],I/O       ; 1.7               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
 
 
-+-------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                       ;
-+-------------------------------+---------------------------------+-------------------+
-; Source Register               ; Destination Register            ; Delay Added in ns ;
-+-------------------------------+---------------------------------+-------------------+
-; buraz:za_buraza|i[31]         ; buraz:za_buraza|read_address[0] ; 3.418             ;
-; buraz:za_buraza|counter50[9]  ; buraz:za_buraza|read_address[0] ; 2.522             ;
-; buraz:za_buraza|counter50[7]  ; buraz:za_buraza|read_address[0] ; 2.519             ;
-; buraz:za_buraza|counter50[6]  ; buraz:za_buraza|read_address[0] ; 2.402             ;
-; buraz:za_buraza|counter50[8]  ; buraz:za_buraza|read_address[0] ; 2.390             ;
-; buraz:za_buraza|counter50[0]  ; buraz:za_buraza|read_address[0] ; 2.388             ;
-; buraz:za_buraza|counter50[5]  ; buraz:za_buraza|read_address[0] ; 2.358             ;
-; buraz:za_buraza|counter50[4]  ; buraz:za_buraza|read_address[0] ; 2.358             ;
-; buraz:za_buraza|counter50[10] ; buraz:za_buraza|read_address[0] ; 2.128             ;
-; buraz:za_buraza|counter50[11] ; buraz:za_buraza|read_address[0] ; 2.126             ;
-; buraz:za_buraza|counter50[25] ; buraz:za_buraza|read_address[0] ; 2.046             ;
-; buraz:za_buraza|counter50[23] ; buraz:za_buraza|read_address[0] ; 2.044             ;
-; buraz:za_buraza|counter50[22] ; buraz:za_buraza|read_address[0] ; 2.043             ;
-; buraz:za_buraza|counter50[19] ; buraz:za_buraza|read_address[0] ; 2.021             ;
-; buraz:za_buraza|counter50[17] ; buraz:za_buraza|read_address[0] ; 2.019             ;
-; buraz:za_buraza|counter50[21] ; buraz:za_buraza|read_address[0] ; 2.018             ;
-; buraz:za_buraza|counter50[20] ; buraz:za_buraza|read_address[0] ; 2.018             ;
-; buraz:za_buraza|counter50[31] ; buraz:za_buraza|read_address[0] ; 1.938             ;
-; buraz:za_buraza|counter50[30] ; buraz:za_buraza|read_address[0] ; 1.918             ;
-; buraz:za_buraza|counter50[3]  ; buraz:za_buraza|read_address[0] ; 1.911             ;
-; buraz:za_buraza|counter50[27] ; buraz:za_buraza|read_address[0] ; 1.910             ;
-; buraz:za_buraza|counter50[26] ; buraz:za_buraza|read_address[0] ; 1.869             ;
-; buraz:za_buraza|counter50[28] ; buraz:za_buraza|read_address[0] ; 1.868             ;
-; buraz:za_buraza|counter50[18] ; buraz:za_buraza|read_address[0] ; 1.840             ;
-; buraz:za_buraza|counter50[15] ; buraz:za_buraza|read_address[0] ; 1.797             ;
-; buraz:za_buraza|counter50[14] ; buraz:za_buraza|read_address[0] ; 1.796             ;
-; buraz:za_buraza|counter50[13] ; buraz:za_buraza|read_address[0] ; 1.773             ;
-; buraz:za_buraza|counter50[12] ; buraz:za_buraza|read_address[0] ; 1.773             ;
-; buraz:za_buraza|counter50[2]  ; buraz:za_buraza|read_address[0] ; 1.745             ;
-; buraz:za_buraza|counter50[29] ; buraz:za_buraza|read_address[0] ; 1.733             ;
-; buraz:za_buraza|counter50[24] ; buraz:za_buraza|read_address[0] ; 1.732             ;
-; buraz:za_buraza|counter50[16] ; buraz:za_buraza|read_address[0] ; 1.706             ;
-; buraz:za_buraza|counter50[1]  ; buraz:za_buraza|read_address[0] ; 1.699             ;
-; sekunde[2]                    ; a_ton4[1]                       ; 0.552             ;
-; sekunde[1]                    ; a_ton4[1]                       ; 0.552             ;
-; sekunde[3]                    ; a_ton4[1]                       ; 0.552             ;
-; sekunde[30]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[29]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[28]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[27]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[26]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[25]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[24]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[23]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[22]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[21]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[20]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[19]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[18]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[17]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[16]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[15]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[14]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[13]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[12]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[11]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[10]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[9]                    ; a_ton4[1]                       ; 0.552             ;
-; sekunde[8]                    ; a_ton4[1]                       ; 0.552             ;
-; sekunde[7]                    ; a_ton4[1]                       ; 0.552             ;
-; sekunde[6]                    ; a_ton4[1]                       ; 0.552             ;
-; sekunde[5]                    ; a_ton4[1]                       ; 0.552             ;
-; sekunde[4]                    ; a_ton4[1]                       ; 0.552             ;
-; sekunde[31]                   ; a_ton4[1]                       ; 0.552             ;
-; sekunde[0]                    ; a_ton4[1]                       ; 0.552             ;
-+-------------------------------+---------------------------------+-------------------+
-Note: This table only shows the top 65 path(s) that have the largest delay added for hold.
++-----------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                           ;
++---------------------------------+-----------------------------------+-------------------+
+; Source Register                 ; Destination Register              ; Delay Added in ns ;
++---------------------------------+-----------------------------------+-------------------+
+; player:za_playera|i[31]         ; player:za_playera|read_address[0] ; 4.797             ;
+; player:za_playera|counter50[7]  ; player:za_playera|read_address[0] ; 3.264             ;
+; player:za_playera|counter50[0]  ; player:za_playera|read_address[0] ; 3.264             ;
+; player:za_playera|counter50[2]  ; player:za_playera|read_address[0] ; 3.112             ;
+; player:za_playera|counter50[3]  ; player:za_playera|read_address[0] ; 3.105             ;
+; player:za_playera|counter50[9]  ; player:za_playera|read_address[0] ; 3.094             ;
+; player:za_playera|counter50[1]  ; player:za_playera|read_address[0] ; 3.065             ;
+; player:za_playera|counter50[25] ; player:za_playera|read_address[0] ; 3.031             ;
+; player:za_playera|counter50[23] ; player:za_playera|read_address[0] ; 3.009             ;
+; player:za_playera|counter50[22] ; player:za_playera|read_address[0] ; 3.008             ;
+; player:za_playera|counter50[19] ; player:za_playera|read_address[0] ; 3.006             ;
+; player:za_playera|counter50[17] ; player:za_playera|read_address[0] ; 3.004             ;
+; player:za_playera|counter50[21] ; player:za_playera|read_address[0] ; 2.985             ;
+; player:za_playera|counter50[20] ; player:za_playera|read_address[0] ; 2.985             ;
+; player:za_playera|counter50[6]  ; player:za_playera|read_address[0] ; 2.977             ;
+; player:za_playera|counter50[8]  ; player:za_playera|read_address[0] ; 2.961             ;
+; player:za_playera|counter50[5]  ; player:za_playera|read_address[0] ; 2.931             ;
+; player:za_playera|counter50[4]  ; player:za_playera|read_address[0] ; 2.931             ;
+; player:za_playera|counter50[31] ; player:za_playera|read_address[0] ; 2.907             ;
+; player:za_playera|counter50[15] ; player:za_playera|read_address[0] ; 2.905             ;
+; player:za_playera|counter50[14] ; player:za_playera|read_address[0] ; 2.904             ;
+; player:za_playera|counter50[30] ; player:za_playera|read_address[0] ; 2.887             ;
+; player:za_playera|counter50[13] ; player:za_playera|read_address[0] ; 2.880             ;
+; player:za_playera|counter50[12] ; player:za_playera|read_address[0] ; 2.880             ;
+; player:za_playera|counter50[27] ; player:za_playera|read_address[0] ; 2.879             ;
+; player:za_playera|counter50[26] ; player:za_playera|read_address[0] ; 2.837             ;
+; player:za_playera|counter50[28] ; player:za_playera|read_address[0] ; 2.836             ;
+; player:za_playera|counter50[18] ; player:za_playera|read_address[0] ; 2.808             ;
+; player:za_playera|counter50[29] ; player:za_playera|read_address[0] ; 2.683             ;
+; player:za_playera|counter50[24] ; player:za_playera|read_address[0] ; 2.681             ;
+; player:za_playera|counter50[10] ; player:za_playera|read_address[0] ; 2.680             ;
+; player:za_playera|counter50[11] ; player:za_playera|read_address[0] ; 2.678             ;
+; player:za_playera|counter50[16] ; player:za_playera|read_address[0] ; 2.654             ;
+; sekunde[2]                      ; a_ton1[1]                         ; 0.826             ;
+; sekunde[30]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[29]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[28]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[27]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[26]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[25]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[24]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[23]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[22]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[21]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[20]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[19]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[18]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[17]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[16]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[15]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[14]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[13]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[12]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[11]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[10]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[9]                      ; a_ton1[1]                         ; 0.826             ;
+; sekunde[8]                      ; a_ton1[1]                         ; 0.826             ;
+; sekunde[7]                      ; a_ton1[1]                         ; 0.826             ;
+; sekunde[6]                      ; a_ton1[1]                         ; 0.826             ;
+; sekunde[5]                      ; a_ton1[1]                         ; 0.826             ;
+; sekunde[4]                      ; a_ton1[1]                         ; 0.826             ;
+; sekunde[31]                     ; a_ton1[1]                         ; 0.826             ;
+; sekunde[0]                      ; a_ton1[1]                         ; 0.826             ;
+; sekunde[1]                      ; a_ton1[1]                         ; 0.825             ;
+; sekunde[3]                      ; a_ton1[1]                         ; 0.825             ;
+; adresniVektorKompozicije[0]     ; RAM:za_RAM|rdata_o[9]             ; 0.188             ;
++---------------------------------+-----------------------------------+-------------------+
+Note: This table only shows the top 66 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -3324,8 +3333,7 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location G7
     Info (169125): Pin ~nCSO~ is reserved at location K9
     Info (169125): Pin ~LVDS195p/nCEO~ is reserved at location AD25
-Critical Warning (169085): No exact pin location assignment(s) for 2 pins of 36 total pins
-    Info (169086): Pin full_FIFO not assigned to an exact location on the device
+Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 35 total pins
     Info (169086): Pin rst not assigned to an exact location on the device
 Warning (335093): TimeQuest Timing Analyzer is analyzing 32 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'upravitelj.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -3334,7 +3342,6 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176353): Automatically promoted node clk (placed in PIN AD15 (CLK13, LVDSCLK6p, Input))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G14
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node counterUpisa[1]
         Info (176357): Destination node sekunde[1]
         Info (176357): Destination node sekunde[2]
         Info (176357): Destination node sekunde[3]
@@ -3344,27 +3351,26 @@ Info (176353): Automatically promoted node clk (placed in PIN AD15 (CLK13, LVDSC
         Info (176357): Destination node sekunde[7]
         Info (176357): Destination node sekunde[8]
         Info (176357): Destination node sekunde[9]
+        Info (176357): Destination node sekunde[10]
         Info (176358): Non-global destination nodes limited to 10 nodes
-Info (176353): Automatically promoted node fifi:za_fifi|ram[0][0]~1 
+Info (176353): Automatically promoted node RAM:za_RAM|ram[0][0]~1 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node fifi:za_fifi|ram[1][0]~0 
+Info (176353): Automatically promoted node RAM:za_RAM|ram[1][0]~0 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node state.SVIRANJE 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node buraz:za_buraza|buzzer:za_buzzer|sound~1
-        Info (176357): Destination node buraz:za_buraza|read_address~2
-        Info (176357): Destination node buraz:za_buraza|counter50[31]
-        Info (176357): Destination node buraz:za_buraza|counter50[30]
-        Info (176357): Destination node buraz:za_buraza|counter50[29]
-        Info (176357): Destination node buraz:za_buraza|counter50[28]
-        Info (176357): Destination node buraz:za_buraza|counter50[25]
-        Info (176357): Destination node buraz:za_buraza|counter50[27]
-        Info (176357): Destination node buraz:za_buraza|counter50[26]
-        Info (176357): Destination node buraz:za_buraza|counter50[24]
+        Info (176357): Destination node player:za_playera|buzzer:za_buzzer|sound~1
+        Info (176357): Destination node player:za_playera|read_address~2
+        Info (176357): Destination node player:za_playera|counter50[31]
+        Info (176357): Destination node player:za_playera|counter50[30]
+        Info (176357): Destination node player:za_playera|counter50[29]
+        Info (176357): Destination node player:za_playera|counter50[28]
+        Info (176357): Destination node player:za_playera|counter50[25]
+        Info (176357): Destination node player:za_playera|counter50[27]
+        Info (176357): Destination node player:za_playera|counter50[26]
+        Info (176357): Destination node player:za_playera|counter50[24]
         Info (176358): Non-global destination nodes limited to 10 nodes
-Info (176353): Automatically promoted node buraz:za_buraza|read_address~3 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node Equal10~0 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
@@ -3373,13 +3379,15 @@ Info (176353): Automatically promoted node Equal10~0
 Info (176353): Automatically promoted node Equal6~2 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node fifi:za_fifi|ram[1][0]~0
-        Info (176357): Destination node fifi:za_fifi|ram[0][0]~1
+        Info (176357): Destination node RAM:za_RAM|ram[1][0]~0
+        Info (176357): Destination node RAM:za_RAM|ram[0][0]~1
 Info (176353): Automatically promoted node Equal7~0 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node Equal8~0 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node Equal9~0 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+Info (176353): Automatically promoted node player:za_playera|read_address~3 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node rst (placed in PIN R29 (CLK4, LVDSCLK2p, Input))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G6
@@ -3398,19 +3406,6 @@ Info (176353): Automatically promoted node rst (placed in PIN R29 (CLK4, LVDSCLK
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 1 (unused VREF, 3.3V VCCIO, 0 input, 1 output, 0 bidirectional)
-        Info (176212): I/O standards used: 3.3-V LVTTL.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  85 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 11 total pin(s) used --  68 pins available
-        Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
-        Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  74 pins available
-        Info (176213): I/O bank number 5 does not use VREF pins and has 3.3V VCCIO pins. 4 total pin(s) used --  81 pins available
-        Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 3 total pin(s) used --  78 pins available
-        Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  73 pins available
-        Info (176213): I/O bank number 8 does not use VREF pins and has 3.3V VCCIO pins. 19 total pin(s) used --  53 pins available
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "AUD_ADCLRCK" is assigned to location or region, but does not exist in design
     Warning (15706): Node "AUD_BCLK" is assigned to location or region, but does not exist in design
@@ -3630,7 +3625,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "iKEY[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "iKEY[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "iKEY[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "iKEY[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "iOTG_DREQ0" is assigned to location or region, but does not exist in design
     Warning (15706): Node "iOTG_DREQ1" is assigned to location or region, but does not exist in design
     Warning (15706): Node "iOTG_INT0" is assigned to location or region, but does not exist in design
@@ -3673,6 +3667,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "iTD2_VS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "iUART_RTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "iUART_RXD" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "key3" is assigned to location or region, but does not exist in design
     Warning (15706): Node "oAUD_DACDAT" is assigned to location or region, but does not exist in design
     Warning (15706): Node "oAUD_XCK" is assigned to location or region, but does not exist in design
     Warning (15706): Node "oDRAM0_A[0]" is assigned to location or region, but does not exist in design
@@ -3913,16 +3908,16 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:05
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 8% of the available device resources in the region that extends from location X48_Y26 to location X59_Y38
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
+    Info (170196): Router estimated peak interconnect usage is 9% of the available device resources in the region that extends from location X48_Y26 to location X59_Y38
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 1.95 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.78 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 29 output pins without output pin load capacitance assignment
+Warning (306006): Found 28 output pins without output pin load capacitance assignment
     Info (306007): Pin "trig" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "sound" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "Hex0[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -3951,7 +3946,6 @@ Warning (306006): Found 29 output pins without output pin load capacitance assig
     Info (306007): Pin "Hex4[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "Hex4[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "Hex4[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "full_FIFO" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
@@ -3960,10 +3954,10 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/Merjem/Desktop/3. godina/PSDS/projekat/kod/Upravitelj/output_files/upravitelj.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 505 warnings
-    Info: Peak virtual memory: 4986 megabytes
-    Info: Processing ended: Tue Jun 20 14:10:06 2023
+    Info: Peak virtual memory: 4990 megabytes
+    Info: Processing ended: Tue Jun 20 16:57:03 2023
     Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +----------------------------+
