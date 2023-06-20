@@ -194,6 +194,8 @@ end component;
 				counterUpisa_next <= std_logic_vector(unsigned(counterUpisa) + 1);
 			elsif state = BRISANJE then
 				counterUpisa_next <= "00";
+			else
+				counterUpisa_next <= counterUpisa;
 			end if;
 	end process;
 	

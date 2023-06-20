@@ -1,5 +1,5 @@
 Analysis & Synthesis report for upravitelj
-Tue Jun 20 12:51:33 2023
+Tue Jun 20 14:09:46 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -48,15 +48,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 20 12:51:33 2023           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 20 14:09:46 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; upravitelj                                      ;
 ; Top-level Entity Name              ; upravitelj                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1,515                                           ;
-;     Total combinational functions  ; 1,515                                           ;
-;     Dedicated logic registers      ; 357                                             ;
-; Total registers                    ; 357                                             ;
+; Total logic elements               ; 1,501                                           ;
+;     Total combinational functions  ; 1,501                                           ;
+;     Dedicated logic registers      ; 356                                             ;
+; Total registers                    ; 356                                             ;
 ; Total pins                         ; 36                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -192,28 +192,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,515 ;
+; Estimated Total logic elements              ; 1,501 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1515  ;
+; Total combinational functions               ; 1501  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 493   ;
-;     -- 3 input functions                    ; 318   ;
-;     -- <=2 input functions                  ; 704   ;
+;     -- 4 input functions                    ; 491   ;
+;     -- 3 input functions                    ; 315   ;
+;     -- <=2 input functions                  ; 695   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 936   ;
-;     -- arithmetic mode                      ; 579   ;
+;     -- normal mode                          ; 923   ;
+;     -- arithmetic mode                      ; 578   ;
 ;                                             ;       ;
-; Total registers                             ; 357   ;
-;     -- Dedicated logic registers            ; 357   ;
+; Total registers                             ; 356   ;
+;     -- Dedicated logic registers            ; 356   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 36    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 347   ;
-; Total fan-out                               ; 5406  ;
-; Average fan-out                             ; 2.83  ;
+; Maximum fan-out                             ; 346   ;
+; Total fan-out                               ; 5368  ;
+; Average fan-out                             ; 2.84  ;
 +---------------------------------------------+-------+
 
 
@@ -222,17 +222,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |upravitelj                              ; 1515 (247)        ; 357 (101)    ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |upravitelj                                                                                                              ; work         ;
+; |upravitelj                              ; 1501 (245)        ; 356 (101)    ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |upravitelj                                                                                                              ; work         ;
 ;    |buraz:za_buraza|                     ; 279 (179)         ; 159 (95)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|buraz:za_buraza                                                                                              ; work         ;
 ;       |buzzer:za_buzzer|                 ; 100 (100)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|buraz:za_buraza|buzzer:za_buzzer                                                                             ; work         ;
 ;    |fifi:za_fifi|                        ; 32 (32)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|fifi:za_fifi                                                                                                 ; work         ;
 ;    |seg27:za_Hex0|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|seg27:za_Hex0                                                                                                ; work         ;
-;    |sonic:za_sonica|                     ; 950 (100)         ; 87 (87)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica                                                                                              ; work         ;
-;       |lpm_divide:Div0|                  ; 850 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0                                                                              ; work         ;
-;          |lpm_divide_mto:auto_generated| ; 850 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated                                                ; work         ;
-;             |abs_divider_3dg:divider|    ; 850 (46)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider                        ; work         ;
+;    |sonic:za_sonica|                     ; 938 (100)         ; 86 (86)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica                                                                                              ; work         ;
+;       |lpm_divide:Div0|                  ; 838 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0                                                                              ; work         ;
+;          |lpm_divide_mto:auto_generated| ; 838 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated                                                ; work         ;
+;             |abs_divider_3dg:divider|    ; 838 (44)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider                        ; work         ;
 ;                |alt_u_div_i5f:divider|   ; 748 (748)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|alt_u_div_i5f:divider  ; work         ;
-;                |lpm_abs_0s9:my_abs_num|  ; 56 (56)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num ; work         ;
+;                |lpm_abs_0s9:my_abs_num|  ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |upravitelj|sonic:za_sonica|lpm_divide:Div0|lpm_divide_mto:auto_generated|abs_divider_3dg:divider|lpm_abs_0s9:my_abs_num ; work         ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -267,8 +267,6 @@ Encoding Type:  One-Hot
 ; a_ton3[1]                                           ; Equal8                       ; yes                    ;
 ; a_ton2[1]                                           ; Equal9                       ; yes                    ;
 ; a_ton1[1]                                           ; Equal10                      ; yes                    ;
-; counterUpisa_next[1]                                ; counterUpisa_next[1]         ; yes                    ;
-; counterUpisa_next[0]                                ; counterUpisa_next[1]         ; yes                    ;
 ; fifi:za_fifi|ram[0][4]                              ; fifi:za_fifi|ram[0][0]       ; yes                    ;
 ; fifi:za_fifi|ram[1][4]                              ; fifi:za_fifi|ram[1][0]       ; yes                    ;
 ; fifi:za_fifi|ram[0][2]                              ; fifi:za_fifi|ram[0][0]       ; yes                    ;
@@ -289,7 +287,7 @@ Encoding Type:  One-Hot
 ; fifi:za_fifi|ram[1][7]                              ; fifi:za_fifi|ram[1][0]       ; yes                    ;
 ; fifi:za_fifi|ram[0][9]                              ; fifi:za_fifi|ram[0][0]       ; yes                    ;
 ; fifi:za_fifi|ram[1][9]                              ; fifi:za_fifi|ram[1][0]       ; yes                    ;
-; Number of user-specified and inferred latches = 34  ;                              ;                        ;
+; Number of user-specified and inferred latches = 32  ;                              ;                        ;
 +-----------------------------------------------------+------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -300,9 +298,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Register name                          ; Reason for Removal                       ;
 +----------------------------------------+------------------------------------------+
 ; buraz:za_buraza|i[0]                   ; Stuck at VCC due to stuck port data_in   ;
+; sonic:za_sonica|distanca[0]            ; Lost fanout                              ;
 ; state.NISTA                            ; Lost fanout                              ;
 ; sonic:za_sonica|distanca[22..30]       ; Merged with sonic:za_sonica|distanca[31] ;
-; Total Number of Removed Registers = 11 ;                                          ;
+; Total Number of Removed Registers = 12 ;                                          ;
 +----------------------------------------+------------------------------------------+
 
 
@@ -311,12 +310,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 357   ;
+; Total registers                              ; 356   ;
 ; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 194   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 160   ;
+; Number of registers using Clock Enable       ; 159   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -331,17 +330,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |upravitelj|buraz:za_buraza|sekunde[14] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |upravitelj|i[12]                       ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |upravitelj|sekunde[31]                 ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |upravitelj|buraz:za_buraza|Mux0        ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |upravitelj|adr_tona_ispis              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |upravitelj|counterUpisa[1]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |upravitelj|buraz:za_buraza|sekunde[2] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |upravitelj|i[11]                      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |upravitelj|sekunde[30]                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |upravitelj|buraz:za_buraza|Mux0       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |upravitelj|adr_tona_ispis             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -391,7 +391,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jun 20 12:51:28 2023
+    Info: Processing started: Tue Jun 20 14:09:41 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off upravitelj -c upravitelj
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/merjem/desktop/3. godina/psds/projekat/kod/fifi/fifi.vhd
@@ -422,9 +422,7 @@ Warning (10036): Verilog HDL or VHDL warning at upravitelj.vhd(81): object "wrEn
 Warning (10036): Verilog HDL or VHDL warning at upravitelj.vhd(91): object "cifra0" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at upravitelj.vhd(91): object "cifra1" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at upravitelj.vhd(194): signal "counterUpisa" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at upravitelj.vhd(190): inferring latch(es) for signal or variable "counterUpisa_next", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "counterUpisa_next[0]" at upravitelj.vhd(190)
-Info (10041): Inferred latch for "counterUpisa_next[1]" at upravitelj.vhd(190)
+Warning (10492): VHDL Process Statement warning at upravitelj.vhd(198): signal "counterUpisa" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (10041): Inferred latch for "a_ton5[0]" at upravitelj.vhd(162)
 Info (10041): Inferred latch for "a_ton5[1]" at upravitelj.vhd(162)
 Info (10041): Inferred latch for "a_ton4[0]" at upravitelj.vhd(161)
@@ -496,25 +494,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_
     Info (12023): Found entity 1: lpm_abs_0s9
 Info (13014): Ignored 31 buffer(s)
     Info (13016): Ignored 31 CARRY_SUM buffer(s)
-Warning (13012): Latch counterUpisa_next[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.SNIMANJE
-Warning (13012): Latch counterUpisa_next[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.SNIMANJE
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Hex4[1]" is stuck at GND
     Warning (13410): Pin "full_FIFO" is stuck at GND
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "adresniVektorKompozicije[1]"
-Info (21057): Implemented 1553 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1537 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 1517 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4658 megabytes
-    Info: Processing ended: Tue Jun 20 12:51:33 2023
+    Info (21061): Implemented 1501 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4668 megabytes
+    Info: Processing ended: Tue Jun 20 14:09:46 2023
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 

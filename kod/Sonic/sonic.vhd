@@ -59,7 +59,7 @@ architecture sonic_arch of sonic is
     
      broj_tipke <= "00" when distanca < 10 else 
 						 "01" when distanca < 20 and distanca >= 10 else
-						 "10" when distanca < 30 and distanca >= 21 else
+						 "10" when distanca < 30 and distanca >= 20 else
 						 "11";
 						 
 		adresa_tona <= broj_tipke;
